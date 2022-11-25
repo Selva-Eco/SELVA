@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="CSS/styles.css" />
+  <!-- <link rel="stylesheet" href="./CSS/calcCss.css" /> -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io//favicon-16x16.png">
+  <link rel="manifest" href="./assets/favicon_io/site.webmanifest" />
+
+  <!-- Fonts -->
+  <link href="http://fonts.cdnfonts.com/css/sansation" rel="stylesheet">
+
+  <!-- JS - JQuery -->
+  <script src="./js/jquery-3.5.0.min.js"></script>
+
+  <title>Cadastre seu imóvel</title>
+</head>
+<body>
+  <div class="page">
+
+    <header class="top-header">
+      <a href="https://www.selva.eco.br/" class="arrow-back">
+        <img src="./assets/arrow-back.svg" alt="Back SELVA website" />
+      </a>
+      <img class="tree-logo" src="./assets//tree+2 1.svg" alt="imagem de logomarca da treeplus" />
+      <p>A Neutral Bank e o SELVA - Amazonic Blockchain Ecosystem, idealizaram o projeto TREE+ como ferramenta digital que promove o mercado de crédito de carbono no Amazonas</p>
+      <div class="start-ups">
+        <img src="./assets/logo-selva3.1.svg" alt="imagem de logomarca da SELVA">
+        <img src="./assets/logo-neutral1.svg" alt="imagem logomarca da neutral-bank">
+        <img src="./assets/seed-restauro1.svg" style="margin-top: 60px;" alt="imagem logo marca de seed restauro">
+      </div>
+    </header>
+
+    <main>
+
+      <div id="btn-main">
+        <button onclick="openSectionCalc()" id="btn-calc" class="btn-menu">Calculadora</button>
+        <button onclick="openSectionForm()" id="btn-form" class="btn-menu">Cadastre seu Imóvel</button>
+      </div>
+      
+      <!-- Form Imovel Section -->
+
+      <section class="form-imovel">
+        <form id="my-form" action="https://treeapi.herokuapp.com/user" method="post">
+          <div class="nome">
+            <label for="name">Nome*</label>
+            <input type="text" name="name" required />
+          </div>
+          <div class="">
+            <label for="CAR">Número do CAR* (Cadastro Ambiental Rural)</label>
+            <input type="text" name="CAR" required />
+          </div>
+          <div class="">
+            <label for="docs">Número do CCIR* (certificado de Cadastro de Imóvel Rural)</label>
+            <input type="file" name="docs" id="docs" required />
+          </div>
+          <div class="">
+            <label for="docs">Arquivo KMZ ou KML* (Arquivos com informações de localizações geográficas)</label>
+            <input type="file" name="docs" id="docs" required />
+          </div>
+          <div class="">
+            <label for="matricula_do_imovel">Matrícula do Imóvel</label>
+            <input type="text" name="matricula_do_imovel" required />
+          </div>
+          <button id="cadastre_seu_imovel" type="submit">
+            Cadastre seu Imóvel
+          </button>
+        </form>
+      </section>
+
+      <!-- Calculator Section -->
+
+      <section class="calculator">
+        <form id="regForm">
+          <!-- One "tab" for each step in the form: -->
+          <div class="tab"><!-- Consumo de Energia -->
+            <h3>Consumo de energia e gás</h3>
+            <h4>Qual é o valor médio gasto por mês?</h4><br><br>
+            <div class="cell-50">
+              <h4>Energia:</h4>
+              <label class="radio">
+                <input type="radio" name="calc_energy_type" value="Reais" checked>
+                <span>Reais</span> 
+              </label>
+              <label class="radio">
+                <input type="radio" name="calc_energy_type" value="KWh">
+                <span>KWh</span>
+              </label>
+              <p><input placeholder="" type="number" min="0" value="0" name="energia_p"></p>
+            </div>
+            <div class="cell-50 last">
+              <h4>Gás:</h4>
+              <label class="radio">
+                <input type="radio" name="calc_gas_type" value="Reais" checked>
+                <span>Reais</span> 
+              </label>
+              <label class="radio">
+                <input type="radio" name="calc_gas_type" value="M3">
+                <span>m<sup style="font-size: 1.5rem;">3</sup></span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="calc_gas_type" value="Botijao">
+                <span>Botijão</span> 
+              </label>
+              <p><input placeholder="" type="number" min="0" value="0" name="gas_p"></p>
+            </div>
+          </div>
+          <div class="tab">
+            <h3>Alimentação</h3>
+            <h4>Qual é o seu nível de consumo dos alimentos abaixo?</h4><br><br>
+            <div class="cell-20">
+              <h4><label for="bovino_p">Carne Bovina:</label></h4><br>
+              <select name="bovino_p" id="bovino">
+                <option value="nc">Não Consumo</option>
+                <option value="alto">Alto</option>
+                <option value="medio">Médio</option>
+                <option value="baixo">Baixo</option>
+              </select>
+            </div>
+            <div class="cell-20">
+              <h4><label for="ave_peixe_p">Ave/Peixe:</label></h4><br>
+              <select name="ave_peixe_p" id="ave_peixe">
+                <option value="nc">Não Consumo</option>
+                <option value="alto">Alto</option>
+                <option value="medio">Médio</option>
+                <option value="baixo">Baixo</option>
+              </select>
+            </div>
+            <div class="cell-20">
+              <h4><label for="suina_p">Carne Suína:</label></h4><br>
+              <select name="suina_p" id="suina">
+                <option value="nc">Não Consumo</option>
+                <option value="alto">Alto</option>
+                <option value="medio">Médio</option>
+                <option value="baixo">Baixo</option>
+              </select>
+            </div>
+            <div class="cell-20">
+              <h4><label for="hibrida_p">Mistura Híbrida:</label></h4><br>
+              <select name="hibrida_p" id="hibrida">
+                <option value="nc">Não Consumo</option>
+                <option value="alto">Alto</option>
+                <option value="medio">Médio</option>
+                <option value="baixo">Baixo</option>
+              </select>
+            </div>
+            <div class="cell-20 last">
+              <h4><label for="vegana_p">Vegana:</label></h4><br>
+              <select name="vegana_p" id="vegana">
+                <option value="nc">Não Consumo</option>
+                <option value="alto">Alto</option>
+                <option value="medio">Médio</option>
+                <option value="baixo">Baixo</option>
+              </select>
+            </div>
+          </div>
+          <div class="tab">
+            <h3>Transporte Individual</h3>
+            <h4>Quantas vezes por semana, em média, você utiliza o meio de transporte abaixo?? </h4><br><br>
+            <div class="cell-33">
+              <h4>Carro:</h4><br>
+              <input placeholder="" type="number" min="0" value="0" name="carro_p">
+            </div>
+            <div class="cell-33">
+              <h4>Moto:</h4><br>
+              <input placeholder="" type="number" min="0" value="0" name="moto_p">
+            </div>
+            <div class="cell-33 last">
+              <h4>Bicicleta:</h4><br>
+              <input placeholder="" type="number" min="0" value="0" name="bicicleta_p">
+            </div>
+          </div>
+          <div class="tab">
+          <h3>Transporte Urbano</h3>
+            <h4>Quantas vezes por semana, em média, você utiliza o meio de transporte abaixo? </h4><br><br>
+            <div class="cell-50">
+              <h4>Ónibus:</h4><br>
+              <input placeholder="" type="number" min="0" value="0" name="onibus_p">
+            </div>
+            <div class="cell-50 last">
+              <h4>Trem:</h4><br>
+              <input placeholder="" type="number" min="0" value="0" name="trem_p">
+            </div>
+          </div>
+          <div class="tab">
+            <h3>Viagens</h3>
+            <div class="cell-50">
+              <h4>Quantas vezes viajou* de avião no último ano?</h4><br>
+              <input placeholder="" type="number" min="0" value="0" name="trechos_p">
+              <br><br><p>*Ida e Volta representam duas viagens</p>
+            </div>
+            <div class="cell-50 last">
+              <h4>Viajou com quantas pessoas?</h4><br>
+              <input placeholder="" type="number" min="0" value="0" name="pessoas_p">
+            </div>
+          </div>
+          <div class="tab">
+              <h4 style="text-align: center;">Resultado</h4><br>
+              <h3>Foram emitidos <span id="resultado_p"></span> tCO²</h3>
+              <div class="pagar">
+                <h4>O valor a compensar da Pegada de Carbono anual é de:
+                </h4>
+                <div id="smart-button-container">
+                  <div style="text-align: center; display: none;"><label for="description"> </label><input type="text" name="descriptionInput" id="description" maxlength="127" value="CompensaÃ§Ã£o de Carbono" hidden></div>
+                    <p id="descriptionError" style="display: none;" class="error-pp">Please enter a description</p>
+                  <div class="montante">
+                    <span class="cifra"> R$</span>
+                    <label for="amount"> </label>
+                    <span id="qfinal" class="total"></span>
+                    <input style="display: none;" name="amountInput" type="number" id="amount" value="" disabled>
+                  </div>
+                  <p id="priceLabelError" class="error-pp" style="display: none;">Please enter a price</p>
+                  <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value="" ></div>
+                    <p id="invoiceidError" class="error-pp" style="display: none;">Please enter an Invoice ID</p>
+                  <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
+                </div>
+                <script src="https://www.paypal.com/sdk/js?client-id=AdSXXwSfHCq7JZhsHGl0RUMJIcqSbhWJrsbd4SrYmkIJ0EEQFOyipJVn7jtX23tlvr4N9hmcfOz942pE&currency=BRL" data-sdk-integration-source="button-factory"></script>
+            </div>
+              
+          </div>
+          <div style="overflow:auto;">
+              <div style="float:right;">
+              <button type="button" id="prevBtn" onclick="nextPrevPessoa(-1)">Anterior</button>
+              <button type="button" id="nextBtn" onclick="nextPrevPessoa(1)">Próximo</button>
+              </div>
+          </div>
+          <!-- Circles which indicates the steps of the form: -->
+          <div style="text-align:center;margin-top:40px;">
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+          </div>
+        </form>
+      </section>
+    </main>
+    
+  </div>
+
+  <!-- Scripts JS -->
+  <script src="./js/calculadora.js"></script>
+  <!-- main js -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

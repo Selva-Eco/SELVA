@@ -1,0 +1,506 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Scroll */
+
+::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--verde);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+:root {
+  font-size: 62.5%; /* 10px */
+
+  /* Colors */
+  --azul: #23CCA0;
+  --verde: #AEC622;
+  --white: #fff;
+  --back: #F5F5F5;
+  --cinza: #424B49;
+  --font: #424B49;
+  --over-image: #424b49de;
+  --back-input: #d9d9d926;
+}
+
+body {
+    background: var(--back);
+}
+
+header {
+  background: linear-gradient(var(--over-image), var(--over-image)), url('../assets//view-tree.png');
+  background-size: cover;
+
+  height: 61.9rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
+  font-family: 'Sansation', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+header .tree-logo {
+  width: 100%;
+  max-width: 20.0rem;
+}
+
+header p {
+    width: 48.7rem;
+    text-align: center;
+}
+
+header .start-ups {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .arrow-back {
+    position: absolute;
+    left: 5.5rem;
+    top: 6.1rem;
+    text-decoration: none;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#btn-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  font-family: 'Sansation, sans-serif';
+}
+
+#btn-main button {
+  border: 0;
+  height: 6.8rem;
+
+  font-size: 2.4rem;
+
+  color: var(--cinza);
+  
+  cursor: pointer;
+}
+
+#btn-main button:nth-child(1):hover {
+  background: #cbe72e;
+}
+
+#btn-main button:nth-child(2):hover {
+  background: #34e7b7;
+}
+
+#btn-main button:nth-child(1) {
+  background-color: var(--verde);
+  transition: .5s ease;
+}
+
+#btn-main button:nth-child(1)::before {
+  opacity: 0.25;
+}
+
+[aria-disabled="true"] {
+  opacity: 0.25;
+}
+
+#btn-main button:nth-child(2) {
+  background-color: var(--azul);
+  transition: .5s ease;
+}
+
+#btn-main button:nth-child(2)::before {
+  opacity: 0.25;
+}
+
+/* Form */
+
+form:nth-child(3) {
+  display: none;
+}
+
+.enable {
+  display: block;
+}
+
+#my-form {
+    width: 54.5rem;
+    height: 93rem;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    /* left: 35.8rem;
+    top: 78.9rem; */
+}
+
+#my-form label {
+    font-family: 'Sansation', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 2.2rem;
+    color: var(--font);
+}
+
+#my-form input {
+    height: 3.3rem;
+    width: 100%;
+    font-size: 2rem;
+    background: var(--back-input);
+    border: .1rem solid var(--verde);
+    border-radius: 1.9rem;
+    box-shadow: 0 .4rem .4rem #00000026;
+    margin-top: 1.4rem;
+    outline: none;
+}
+
+#my-form div {
+    margin-top: 6.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#my-form input[type="file"] {
+    height: 17.7rem;
+    width: 54.5rem;
+    border: .2rem dashed var(--verde);
+    transition: .5s;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: var(--font);
+}
+
+#my-form input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+#my-form input[type="file"]::before {
+    content: "Arraste aqui ou selecione o arquivo";
+    color: var(--font);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#my-form input[type="file"]:hover {
+    background: var(--verde);
+}
+
+#cadastre_seu_imovel {
+  width: 100%;
+  height: 6.8rem;
+  background-color: var(--verde);
+  box-shadow: 0 .4rem .4rem #00000026;
+
+  border: 0;
+  border-radius: 3.1rem;
+  padding: 2.3rem 15.8rem;
+  margin: 4.1rem 0 16.5rem 0;
+
+  font-family: 'Sansation', sans-serif;
+  font-size: 2.4rem;
+  
+  color: var(--cinza);
+
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+#cadastre_seu_imovel:hover {
+  background: #d6f331;
+}
+
+/* Calculator Styles */
+
+.calculator {
+  display: block;
+  margin: 7.5rem 0 2rem 0;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6rem;
+
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  font-style: normal;
+  font-family: 'Sansation', sans-serif;
+
+  color: var(--font);
+}
+
+.calculator h2 {
+  text-align: center; 
+  margin-bottom: 10px;
+
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  font-style: normal;
+  font-family: 'Sansation', sans-serif;
+
+  color: var(--font);
+}
+
+.calculator h3 {
+  text-align: center; 
+  margin-bottom: 10rem;
+  
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  font-style: normal;
+  font-family: 'Sansation', sans-serif;
+
+  color: var(--font);
+}
+
+.calculator h4{
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+    font-style: normal;
+    font-family: 'Sansation', sans-serif;
+
+    color: var(--font);
+}
+
+.calculator input,
+.calculator select {
+  padding: 1rem;
+  width: 100%;
+  font-size: 2rem;
+
+  background: var(--back-input);
+  border: .1rem solid var(--verde);
+  border-radius: 1.9rem;
+  box-shadow: 0 .4rem .4rem #00000026;
+
+  outline: none;
+}
+
+/* Mark input boxes that gets an error on validation: */
+.calculator input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.calculator .tab {
+  display: none;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.calculator .cell-50 {
+  width: 49%;
+  float: left;
+  display: table-cell;
+  margin: 0 20px 20px 0;
+}
+
+.calculator .cell-33 {
+    display: table-cell;
+    float: left;
+    width: 32%;
+    margin: 0 2% 20px 0;
+}
+
+.calculator .cell-20 {
+  width: 18%;
+  float: left;
+  display: table-cell;
+  margin: 0 2.5% 20px 0;
+}
+
+.calculator .cell-50.last,
+.calculator .cell-33.last,
+.calculator .cell-20.last {
+  margin-right: 0;
+}
+
+.calculator label.radio {
+  cursor: pointer;
+}
+
+.calculator label.radio input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.calculator label.radio span {
+  padding: 5px 14px;
+  margin: 10px 10px  10px 0;
+  border: 2px solid #18B100;
+  display: inline-block;
+  color: #18B100;
+  border-radius: 25px;
+}
+
+.calculator label.radio input:checked + span {    
+  border-color: #18B100;
+  background-color: #18B100;
+  color: #fff;
+}
+
+.calculator.controls {
+    display: block;
+    width: 100%;
+}
+
+.calculator .buttons {
+  float:right;
+}
+
+.calculator button {
+  background-color: #18B100;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.calculator button:hover {
+  opacity: 0.8;
+}
+
+.calculator #prevBtn {
+  background-color: transparent;
+  color: #04AA6D;
+  border: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.calculator .step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.calculator .step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.calculator .step.finish {
+  background-color: #04AA6D;
+}
+
+/* PayPal */
+.calculator .pagar {
+  width: 40%;
+  max-width: 350px;    
+  float: none;
+  margin: 0 auto;
+}
+
+.calculator .montante {
+  display: table; 
+}
+
+.calculator .cifra {
+  display: table-cell; 
+  font-size: 26px;
+  padding-right: 5px; 
+  color: #3ED362;
+}
+
+.calculator .total {
+  display: table-cell; 
+  background-color: transparent; 
+  border: none; 
+  color: #3ED362; 
+  padding: 0; 
+  font-size: 26px;
+}
+
+.calculator .error-pp {
+  visibility: hidden; 
+  color:red; 
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .calculator .tab {
+    display: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }   
+  .calculator form {
+      margin: 0 10px;
+  }
+  .calculator .cell-50,
+  .calculator .cell-33,
+  .calculator .cell-20 {
+      width: 100%;
+      margin: 0 0 10px 0;
+  }
+  .calculator .buttons {
+    float: none;
+  }
+  .calculator button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .calculator #prevBtn {
+    float: left;
+    width: 48%;
+    margin-right: 2%;
+  }
+  .calculator #nextBtn {
+    float: right;
+    width: 50%;
+    min-width: 100px;
+  }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1500px) {
+  #my-form {
+    width: 54.5rem;
+    height: 93rem;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    /* left: 35.8rem;
+    top: 78.9rem; */
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  #my-form {
+    width: 54.5rem;
+    height: 93rem;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    /* left: 35.8rem;
+    top: 78.9rem; */
+  }
+}

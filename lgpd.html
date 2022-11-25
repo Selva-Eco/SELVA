@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>LGPD SELVA</title>
+
+	<link href="./icon-16x16.png" rel="icon" sizes="16x16" />
+	<link href="./icon-32x32.png" rel="icon" sizes="32x32" />
+	<link href="./icon-48x48.png" rel="icon" sizes="48x48" />
+	<link href="./icon-64x64.png" rel="icon" sizes="64x64" />
+	<link href="./icon-128x128.png" rel="icon" sizes="128x128" />
+	<link href="./library-css/bundle.min.css" rel="stylesheet" />
+	<link href="./library-css/jquery.fancybox.min.css" rel="stylesheet" />
+	<link href="./library-css/owl.carousel.min.css" rel="stylesheet" />
+	<link href="./library-css/swiper.min.css" rel="stylesheet" />
+	<link href="./library-css/cubeportfolio.min.css" rel="stylesheet" />
+	<link href="./library-css/navigation.css" rel="stylesheet" />
+	<link href="./library-css/settings.css" rel="stylesheet" />
+	<link href="./library-css/slick.css" rel="stylesheet" />
+	<link href="./library-css/slick-theme.css" rel="stylesheet" />
+	<link href="./library-css/select2.min.css" rel="stylesheet" />
+	<link href="./blog/article.css" rel="stylesheet" />
+	<link href="../library-css/custom.css" rel="stylesheet" />
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=62f45796d0f0e200194b7b99&product=sticky-share-buttons" async="async"></script> -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body data-offset="90" data-spy="scroll" data-target=".navbar-nav">
+
+	<!--///////////// POPUP //////////////////-->
+
+	<button class="mobilePopup" onclick="showBook()">
+		Assinar
+	</button>
+
+	<div id="request">
+		<section class="half-section p-0 mb-5">
+			<div class="closePopup" onclick="hide()">
+				<ion-icon name="close-outline"></ion-icon>
+			</div>
+			<div class="container-fluid">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="main-title wow fadeIn" data-wow-delay="300ms">
+								<h2> Assine e ganhe <br><b> o ebook SELVA </b>  </h2>
+
+								<p>As features do<strong> SELVA</strong> ofecerem eco-soluções r&aacute;pidas e seguras para voc&ecirc; formalizar e gerar o green-compliance aos seus bioprodutos e servi&ccedil;os rurais.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row align-items-center">
+					<div class="col-lg-6 col-md-12 p-0">
+						<div class="owl-carousel owl-theme owl-split">
+							<div class="item">
+								<div class=" split-blog-scale">
+									<img alt="request" class="about-img" width="500" src="../img1.jpeg" />
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-6 col-md-12 split-box-container-setting text-center p-md-0 text-blue" style="background-color: #091E2E;">
+						<div class="split-container-setting">
+							<div class="main-title text-center text-lg-left mb-lg-4 wow fadeIn" data-wow-delay="300ms">
+								<h5 class="mt-2rem" style="color: white;">
+									Conhe&ccedil;a o <strong>SELVA</strong> e saiba como fazer parte dessa comunidade de a&ccedil;&otilde;es para desenvolvimento e transforma&ccedil;&atilde;o social da Amaz&ocirc;nia:
+								</h5>
+							</div>
+
+							<div class="request-form">
+								<form action="https://selva-website-api.herokuapp.com/user" method="post" class="request-form-outer">
+									<div class="row">
+									<div class="col-md-12 col-sm-12">
+										<div class="request-form-textfield pb-4">
+											<input data-email class="form-control mb-0" id="nome" name="nome" placeholder="Nome" required type="text" />
+											<input data-email class="form-control mb-0" id="telefone" name="telefone" placeholder="Telefone"  type="text" />
+											<input data-email class="form-control mb-0" id="email" name="email" placeholder="E-mail" type="email" />
+										</div>
+									</div>
+									
+									<div class="col-md-12 col-sm-12">
+										<div class="request-form-textfield pb-4">
+											<select class="form-control" id="services" name="service" required="" title="service">
+												<option>Tipo de Usu&aacute;rio</option>
+												<option value="1">Produtor</option>
+												<option value="2">Investidor</option>
+												<option value="3">Pesquisador</option>
+												<option value="4">Outros</option> 
+											</select>
+										</div>
+									</div>
+
+									<div class="col-lg-12 pt-xs-25px text-lg-left text-center">
+										<a class="btn-setting btn-scale btn-blue text-white contact_btn" id="btnSubmit" target="_blank" href="https://www.selva.eco.br/ebook.pdf">
+											Assinar e baixar E-Book
+										</a>
+									</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!--////////////////// BODY ////////////////////-->
+
+	<div class="loader" id="loader-fade">
+		<div class="loader-container">
+			<ul class="loader-box">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+
+	<header class="header-appear">
+		<nav class="navbar navbar-top-default navbar-expand-lg static-nav transparent-bg nav-bottom-line">
+			<div class="container">
+				<div class="collapse navbar-collapse d-none d-lg-block">
+					<a class="indx" href="./index.html">
+						<img alt="logo" class="logo-scrolled" src="../logo2.png" title="Logo" />
+					</a>
+					<ul class="nav navbar-nav newblog">
+						<!-- <a class=" nav-link" href="#">LGPD SELVA</a> -->
+					</ul>
+				</div>
+				<button class="scroll btn-setting btn-scale btn-green text-white d-none d-lg-block btnEbook" onclick="showBook()">
+					E-BOOK GR&Aacute;TIS
+				</button> 
+				<a class="menu_bars d-inline-block menu-bars-setting" id="sidemenu_toggle"> </a>
+
+				<div class="menu-lines"></div>
+				<a class="menu_bars d-inline-block menu-bars-setting" id="sidemenu_toggle"> </a>
+			</div>
+		</nav>
+
+		<div class="side-menu">
+			<div class="inner-wrapper nav-icon">
+
+				<div class="side-footer text-white w-100">
+					<ul class="social-icons-simple">
+						<li class="side-menu-icons"></li>
+						<li class="side-menu-icons"></li>
+						<li class="side-menu-icons"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="boxes">
+		<div id="box-public">
+			<div class="text">
+				<h1>Quer seu artigo publicado no blog/newsletter da SELVA?</h1>
+				<h3>Preencha os campos abaixo</h3>
+				<ion-icon onclick="hide()" name="close-outline"></ion-icon>
+			</div>
+			<div class="form">
+				<form action="https://selva-website-api.herokuapp.com/post" enctype="multipart/form-data" method="post">
+					<input type="text" name="name" id="name" placeholder="Nome" required>
+					<input type="text" placeholder="E-mail" required>
+					<textarea name="article" id="article" placeholder="Seu artigo ou notícia"></textarea>
+					<span>OU</span>
+					<input style="color: #fff;" type="file" name="doc" id="doc">
+					<button type="submit" id="btnSubmit">Enviar</button>
+				</form>
+			</div>
+		</div>
+	
+		<div id="box-selvatico">
+			<div class="text">
+				<h1>Quer ser selvático?</h1>
+				<h3>Cadastre seu currículo</h3>
+				<ion-icon onclick="hide()" name="close-outline"></ion-icon>
+			</div>
+			<div class="form">
+				<form action="https://selva-website-api.herokuapp.com/resume" enctype="multipart/form-data" method="post">
+					<input type="text" name="name" id="name" placeholder="Nome" required>
+					<input type="text" placeholder="E-mail" required>
+					<input style="color: #fff;" type="file" name="doc" id="doc">
+					<button type="submit" id="btnSubmit">Cadastrar</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+    <div class="sharethis-sticky-share-buttons share"></div>
+
+    
+	<section class="bg-light-gray3" onclick="hide()" id="articles">
+        <div class="bg-light-gray3 image">
+            <img src="../SELVA.png" alt="Artigo" width="800">
+        </div>
+		<div class="new-box">
+			<div class="new-box-item">
+                <h3 style="text-align: center;">TERMOS DE USO E POLÍTICA DE PRIVACIDADE</h3>
+				
+				<br>
+                
+				<p>
+                    Este Termo de Uso regulamenta o uso do serviço do portal de Internet <a href="www.selva.eco.br">www.selva.eco.br</a> e do aplicativo
+					SELVA – Amazonic Blockchain Ecosystem, de responsabilidade da SELVA – Amazonic Blockchain
+					Ecosystem, pessoa jurídica com sede na cidade de MANAUS/AM, inscrita no CNPJ sob o n.
+					46.195.610/0001-99, oferece aos seus USUÁRIOS:
+                </p>
+                <p>
+                    1) Qualquer pessoa, física ou jurídica, doravante nominada USUÁRIO, que pretenda utilizar os serviços
+					da SELVA deverá aceitar as Cláusulas de Uso e todas as demais políticas e princípios que as regem.
+                </p>
+                <p>
+                    2) A aceitação deste termo e condições gerais é indispensável à utilização dos sites, aplicativo e demais
+					serviços prestados pela SELVA.
+                </p>
+                <p>
+                    O USUÁRIO deverá ler, certificar-se de haver entendido e aceitar todas as disposições estabelecidas nos
+					Termos e Condições e na Política de Privacidade, para que então seja efetuado com sucesso seu
+					cadastro como USUÁRIO dos serviços SELVA – Amazonic Blockchain Ecosystem.
+                </p>
+                <p>
+                    <b>I – DO USUÁRIO:</b>
+                </p>
+                <p>
+                    3) Os serviços da selva.eco.br somente estão disponíveis para as pessoas que tenham plena capacidade
+					de fato para contratar. Dessa forma, não podem efetuar cadastro pessoas menores de 18 anos ou
+					acometidas por outras incapacidades inscritas nos artigos 3º e 4º do Código Civil Brasileiro, salvo se
+					devidamente representadas ou assistidas.
+                </p>
+                <p>
+                    4) As pessoas jurídicas efetuarão seus cadastros por meio de representante legal.
+                </p>
+                <p>
+                    5) O USUÁRIO se compromete a fornecer seus dados pessoais de forma verdadeira e precisa, devendo
+					atualizá-los sempre que ocorrer alguma alteração.
+                </p>
+                <p>
+                    6) SELVA – Amazonic Blockchain Ecosystem não se responsabiliza pela veracidade das informações
+					prestadas por seus USUÁRIOS, sendo deles toda a responsabilidade por seu conteúdo.
+                </p>
+                <p>
+                    7) A SELVA – Amazonic Blockchain Ecosystem pode checar a veracidade dos dados cadastrais de um
+					USUÁRIO a qualquer tempo. Caso constate haver entre eles dados incorretos ou inverídicos, ou ainda
+					caso o USUÁRIO se furte ou se negue a enviar os documentos requeridos, a SELVA – Amazonic
+					Blockchain Ecosystem poderá bloquear o perfil do USUÁRIO, até que a irregularidade seja sanada.
+                </p>
+				<p>
+					8) O USUÁRIO acessará sua conta através de login e senha, comprometendo-se a não informar a
+					terceiros esses dados, responsabilizando-se integralmente pelo uso que deles seja feito.
+				</p>
+				<p>
+					9) O USUÁRIO compromete-se a notificar a SELVA – Amazonic Blockchain Ecosystem imediatamente,
+					através do contato@selva.eco.br , caso ocorra uso não autorizado de sua conta, bem como o acesso não
+					autorizado por terceiros a mesma. O USUÁRIO será o único responsável pelas operações efetuadas em
+					sua conta, uma vez que o acesso à mesma só será possível mediante a senha pessoal do USUÁRIO.
+				</p>
+				<p>
+					10) O login que o USUÁRIO utiliza na Selva.eco.br não poderá guardar semelhança com o nome
+					Selva.eco.br, tampouco poderá ser utilizado qualquer login considerado ofensivo, bem como os que
+					contenham dados pessoais do USUÁRIO ou alguma URL ou endereço eletrônico.
+				</p>
+				<p>
+					11) É de responsabilidade do USUÁRIO manter uma cópia dos seus e-mails do domínio que estão
+					hospedados em nossos servidores. E-mails na caixa de entrada com mais de 90 dias, são deletados
+					automaticamente do sistema como medida de limpeza dos servidores. Caso o USUÁRIO queira que os e-
+					mails sejam salvos de forma permanente, deve-se utilizar algum software de e-mails como por exemplo
+					o Outlook.
+				</p>
+				<p>
+					<b>II – DO SERVIÇO PRESTADO:</b>
+				</p>
+				<p>
+					12) A Selva.eco.br é um website que possui como objetivo criar soluções tecnológicas para bioeconomia
+					da Amazônia, instrumentalizando o acesso legal ao capital natural amazônico através de sua estrutura
+					digital.
+				</p>
+				<p>
+					13) Os serviços disponibilizados pela Selva.eco.br são no modelo freemium, notadamente a ferramenta
+					SELVA Service.
+				</p>
+				<p>
+					14) Ao final do período contratado e pago antecipadamente, caso não haja renovação dos créditos em
+					nenhum dos planos de pagamento, o website do Usuário será suspenso.
+				</p>
+				<p>
+					15) O Usuário poderá optar pela renovação automática dos créditos, segundo plano de pagamento
+					escolhido, através do cadastramento de um cartão de credito. Caso o Usuário opte por essa alternativa
+					de pagamento, ao final de cada período de utilização novos créditos serão adquiridos automaticamente,
+					conforme quantidade estipulada para o plano de pagamento escolhido pelo Usuário.
+				</p>
+				<p>
+					16) Em razão do exposto na clausula 12 não haverá reembolso proporcional do montante pago pelo
+					Usuário, caso seja feita a rescisão do contrato antes do término do prazo concedido para utilização dos
+					serviços fornecidos pela Selva.eco.br.
+				</p>
+				<p>
+					17) Antes de contratar os serviços, os USUÁRIOS possuem a prerrogativa de utilizar todos os recursos da
+					SELVA – Amazonic Blockchain Ecosystem por 15 (quinze) dias gratuitos, independente de qualquer
+					compromisso futuro.
+				</p>
+				<p>
+					18) Os USUÁRIOS não possuem vínculos de permanência com os serviços prestados, podendo, assim,
+					cancelá-los caso desejem, mediante notificação escrita, virtual ou não, com confirmação de
+					recebimento.
+				</p>
+				<p>
+					19) A Selva.eco.br irá realizar o registro e pagamento do domínio da loja virtual do USUÁRIO, após o
+					primeiro pagamento da recarga e de acordo com o plano adquirido nesta data. O domínio deverá ser
+					escolhido pelo USUÁRIO de acordo com o tipo de domínio compatível a cada plano. A renovação do
+					domínio irá ocorrer após 1 (um) ano da data em que o domínio foi registrado. Esta renovação somente
+					será realizada caso a loja virtual esteja online na data em que o domínio vencer. Caso a loja do USUÁRIO
+					não esteja em dia com os pagamentos na data vigente a renovação do domínio, esta renovação não irá
+					ocorrer, acarretando na perda do domínio.
+				</p>
+				<p>
+					19.1) A administração do domínio registrado e pago pela LojaVirtual.com.br, somente será transferida
+					para o USUÁRIO mediante solicitação, desde que transcorridos 30 dias de utilização/hospedagem da loja
+					virtual à qual o domínio criado esteja vinculado. Em caso de rescisão antecipada do contrato entre
+					LojaVirtual.com.br e USUÁRIO, por solicitação desse último, as despesas suportadas pela
+					LojaVirtual.com.br, para registro do referido domínio, serão cobradas do USUÁRIO em sua integralidade.
+				</p>
+				<p>
+					20) Domínios registrados e mantidos nas contas administrativas da LojaVirtual.com.br serão renovados
+					ao final do período de um ano, caso a loja esteja online nesta data conforme o item 18. O tempo para
+					renovação e atualização deste domínio é de 72 horas após a data do vencimento do domínio e neste
+					período a loja pode vir apresentar instabilidades devido ao processo de atualização e propagação dos
+					dns.
+				</p>
+				<p>
+					21) Caso o USUÁRIO esteja em processo de registro de marca e precise do domínio em seu nome
+					próprio, deverá informar antes da assinatura do domínio ou futuramente arcar com a taxa (a ser
+					acordada) para a transferência de nome do domínio para cobrir os custos de autenticação.
+				</p>
+				<p>
+					22) O USUÁRIO terá direito as contas de e-mail deste domínio e o redirecionamento para a sua loja é
+					feito pela SELVA – Amazonic Blockchain Ecosystem, mediante orçamento prévio. Como exemplo:
+					lojaamazonica@selva.eco.br.
+				</p>
+				<p>
+					23) Em nenhuma hipótese protocolos SSL adquiridos em site de terceiros serão instalados em um
+					servidor da SELVA – Amazonic Blockchain Ecosystem.
+				</p>
+				<p>
+					24) Caso o USUÁRIO deseje remover a assinatura da SELVA – Amazonic Blockchain Ecosystem de sua loja
+					virtual não será cobrado nenhum valor. A solicitação pode ser feita por qualquer forma de contato
+					escrito, mediante confirmação do seu recebimento.
+				</p>
+				<p>
+					25) SELVA – Amazonic Blockchain Ecosystem poderá mudar os valores citados neste contrato ou
+					modificar quaisquer de suas clausulas, mediante notificação previa enviada aos USUÁRIOS.
+				</p>
+				<p>
+					26) Pagamentos realizados por depósito bancário só serão confirmados após o envio e localização do
+					comprovante de depósito do mesmo. A SELVA – Amazonic Blockchain Ecosystem não se responsabiliza
+					por eventuais bloqueios ocasionados pela não localização de pagamentos feitos deste modo. É
+					obrigação do USUÁRIO que optou por este método de pagamento enviar o comprovante para a SELVA –
+					Amazonic Blockchain Ecosystem e confirmar o recebimento do mesmo.
+				</p>
+				<p>
+					27) Não será permitido o anúncio de serviços ou imagens ilícitas, imorais, discriminatórias ou que violem
+					direitos autorais de terceiros como, por exemplo, relacionadas a pornografia infantil e racismo, entre
+					outras. Bem como será proibida a exposição à venda de produtos destinados a práticas criminosas,
+					substancias entorpecentes ou farmacológicas ilícitas ou de venda restrita pela Anvisa, podendo a
+					LojaVirtual.com.br retirá-los do ar imediatamente, mediante comunicação posterior.
+				</p>
+				<p>
+					28) Caso algum terceiro notifique a SELVA – Amazonic Blockchain Ecosystem alegando o cometimento
+					de violação de propriedade intelectual/industrial por algum de seus USUÁRIOS, através de anúncios em
+					seus respectivos websites, SELVA – Amazonic Blockchain Ecosystem reserva-se no direito de, averiguada
+					a denúncia, retirar o website do ar imediatamente, mediante comunicação posterior ao USUÁRIO.
+				</p>
+				<p>
+					29) A qualquer momento a SELVA – Amazonic Blockchain Ecosystem poderá, a seu exclusivo critério,
+					suspender ou interromper por prazo indeterminado os serviços prestados ao USUÁRIO, em casos de
+					suspeita de cometimento de fraudes ao consumidor, fundamentada por denúncias de qualquer tipo,
+					notificações judiciais e/ou extrajudiciais, citações em processos de responsabilidade a qualquer título.
+				</p>
+				<p>
+					30) Caso sejam detectados acessos robóticos e/ou ilegais na loja virtual do USUÁRIO, a SELVA –
+					Amazonic Blockchain Ecosystem poderá bloquear automaticamente a loja por tempo indeterminado por
+					medidas de segurança.
+				</p>
+				<p>
+					31) SELVA – Amazonic Blockchain Ecosystem se responsabiliza por qualquer dano, prejuízo ou perda
+					sofridos pelo USUÁRIO em razão de falhas na internet, no sistema ou no servidor utilizados pelo
+					USUÁRIO, decorrentes de condutas de terceiros, caso fortuito ou força maior. A SELVA – Amazonic
+					Blockchain Ecosystem também não será responsável por qualquer vírus que ataque o equipamento do
+					USUÁRIO em decorrência do acesso, utilização ou navegação na internet ou devido a transferências de
+					dados, arquivos, imagens, textos ou áudio.
+				</p>
+				<p>
+					32) SELVA – Amazonic Blockchain Ecosystem se responsabiliza apenas pelos serviços oferecidos no seu
+					portal, não oferecendo suporte a quaisquer produtos adquiridos em outras empresas, não assumindo
+					prejuízo algum devido à impossibilidade de instalação ou danos a loja, devido à utilização incorreta de
+					códigos oferecido por terceiros.
+				</p>
+				<p>
+					33) SELVA – Amazonic Blockchain Ecosystem não possui qualquer relação com a atividade desenvolvida
+					pelos USUÁRIOS no website, ficando sua responsabilidade restrita ao desenvolvimento funcional do
+					website.
+				</p>
+				<p>
+					<b>III – DAS DISPOSIÇÕES FINAIS:</b>
+				</p>
+				<p>
+					35) Estes Termos e Condições Gerais não geram nenhum contrato de sociedade, de mandato, franquia
+					ou relação de trabalho entre a LojaVirtual.com.br e o USUÁRIO. O USUÁRIO manifesta ciência de que a
+					LojaVirtual.com.br não é parte de nenhuma transação realizada entre USUÁRIOS, nem possui controle
+					algum sobre a qualidade, segurança ou legalidade dos produtos ou serviços anunciados pelos
+					USUÁRIOS, sobre a veracidade ou exatidão dos anúncios elaborados pelos USUÁRIOS, e sobre a
+					capacidade dos USUÁRIOS para negociar.
+				</p>
+				<p>
+					36) O conteúdo deste instrumento poderá ser modificado livremente pela SELVA – Amazonic Blockchain
+					Ecosystem por meio de comunicação eletrônica aos USUÁRIOS, passando os novos termos a valer desde
+					a data em que forem veiculados no site da LojaVirtual.com.br, reservando-se ao USUÁRIO o direito de
+					permanecer cadastrado ou simplesmente solicitar sua exclusão.
+				</p>
+				<p>
+					37) Todo o conteúdo, como, por exemplo, textos, programas de computador, sons, fotografias e outros
+					materiais disponíveis na SELVA – Amazonic Blockchain Ecosystem, marcas, patentes, modelos, desenhos
+					industriais, a aparência, a organização e a estrutura da SELVA – Amazonic Blockchain Ecosystem são
+					protegidas pela legislação de propriedade intelectual aplicável e não infringem qualquer lei ou norma a
+					que estejam subordinadas, contratos, documentos, acordos dos quais faz parte, bem como não infringe
+					direitos de terceiros. A violação de tais direitos ensejará a respectiva reparação integral dos danos aos
+					prejudicados, seja a SELVA – Amazonic Blockchain Ecosystem, seus USUÁRIOS e/ou terceiros.
+				</p>
+				<p>
+					38) É vedado ao USUÁRIO modificar, copiar, distribuir, transmitir, exibir, realizar, reproduzir, publicar,
+					disponibilizar, licenciar ou criar obras derivadas a partir das informações coletadas no site SELVA –
+					Amazonic Blockchain Ecosystemr, bem como transferir ou vender tais informações, software, produtos
+					ou serviços, sob pena de violação do presente termo e infração legal. Caso tenha interesse em parcerias,
+					utilize os canais corretos de negociação (contato@selva.eco.br).
+				</p>
+				<p>
+					39) Fica eleito, para dirimir eventuais dúvidas e resolver os conflitos oriundos deste contrato, o foro da
+					Cidade de Manaus, Estado do Amazonas, com renúncia a qualquer outro, por mais privilegiado que seja,
+					salvo os USUÁRIOS que se enquadrem no conceito legal de consumidor e optem pela prerrogativa legal.
+				</p>
+				<p>
+					40) Os casos omissos neste instrumento serão resolvidos de conformidade com as disposições legais
+					aplicáveis à espécie.
+				</p>
+				<p>
+					41) Os casos omissos neste instrumento serão resolvidos de conformidade com as disposições legais
+					aplicáveis à espécie.
+				</p>
+
+				<br><br>
+
+                <p style="text-align: center;">
+                    CNPJ: 46.195.610/001-99 <br>
+					contato@selva.eco.br <br>
+					+55 (92) 9 9264 – 3800 <br>
+					<a href="www.selva.eco.br">www.selva.eco.br</a>
+                </p>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-light-gray3" id="newPost">
+		<div class="new-box">
+			<div class="new-box-item publiqueNew">
+                <h3 style="text-align: center;">Quer seu artigo publicado no Blog/Newsletter da SELVA?</h3>
+				<button onclick="showNew()" class="publique">Publique aqui</button>
+			</div>
+		</div>
+		
+		<div class="new-box">
+			<div class="new-box-item selvaticoNew">
+                <h3 style="text-align: center;">Quer ser selvático?</h3>
+				<button onclick="showSelva()" class="selvatico">Cadastre seu currículo</button>
+			</div>
+		</div>
+	</section>
+
+	<footer class="bg-green" onclick="hide()">
+        <span>Nos siga nas redes sociais</span>
+        <div class="redes-sociais">
+            <a href="https://www.linkedin.com/in/selva-am-4644321b1/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="https://www.instagram.com/selva.eco/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-instagram"></ion-icon></a>
+        </div>
+        <p class="copyrights px-0 py-5">&copy; 2022 SELVA - Sistema Estruturado Legal de Valores Amaz&ocirc;nicos</p>
+	</footer>
+
+	<script src="./library-js/bundle.min.js"></script>
+	<script src="./library-js/jquery.fancybox.min.js"></script>
+	<script src="./library-js/owl.carousel.min.js"></script>
+	<script src="./library-js/swiper.min.js"></script>
+	<script src="./library-js/jquery.cubeportfolio.min.js"></script>
+	<script src="./library-js/jquery.appear.js"></script>
+	<script src="./library-js/parallaxie.min.js"></script>
+	<script src="./library-js/wow.min.js"></script>
+	<script src="./library-js/select2.min.js"></script>
+	<script src="./library-js/slick.min.js"></script>
+	<script src="./library-js/jquery.themepunch.tools.min.js"></script>
+	<script src="./library-js/jquery.themepunch.revolution.min.js"></script>
+	<script src="./library-js/revolution.extension.actions.min.js"></script>
+	<script src="./library-js/revolution.extension.carousel.min.js"></script>
+	<script src="./library-js/revolution.extension.kenburn.min.js"></script>
+	<script src="./library-js/revolution.extension.layeranimation.min.js"></script>
+	<script src="./library-js/revolution.extension.migration.min.js"></script>
+	<script src="./library-js/revolution.extension.navigation.min.js"></script>
+	<script src="./library-js/revolution.extension.parallax.min.js"></script>
+	<script src="./library-js/revolution.extension.slideanims.min.js"></script>
+	<script src="./library-js/revolution.extension.video.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgIfLQi8KTxTJahilcem6qHusV-V6XXjw"></script>
+	<script src="./library-js/maps.min.js"></script>
+	<script src="./library-js/contact_us.js"></script>
+	<script src="./blog/article.js"></script>
+
+</body>
+</html>

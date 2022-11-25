@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>SELVA - BLOG/NEWSLETTER</title>
+
+	<link href="icon-16x16.png" rel="icon" sizes="16x16" />
+	<link href="icon-32x32.png" rel="icon" sizes="32x32" />
+	<link href="icon-48x48.png" rel="icon" sizes="48x48" />
+	<link href="icon-64x64.png" rel="icon" sizes="64x64" />
+	<link href="icon-128x128.png" rel="icon" sizes="128x128" />
+	<link href="library-css/bundle.min.css" rel="stylesheet" />
+	<link href="library-css/jquery.fancybox.min.css" rel="stylesheet" />
+	<link href="library-css/owl.carousel.min.css" rel="stylesheet" />
+	<link href="library-css/swiper.min.css" rel="stylesheet" />
+	<link href="library-css/cubeportfolio.min.css" rel="stylesheet" />
+	<link href="library-css/navigation.css" rel="stylesheet" />
+	<link href="library-css/settings.css" rel="stylesheet" />
+	<link href="library-css/slick.css" rel="stylesheet" />
+	<link href="library-css/slick-theme.css" rel="stylesheet" />
+	<link href="library-css/select2.min.css" rel="stylesheet" />
+	<link href="blog.css" rel="stylesheet" />
+	<link href="library-css/custom.css" rel="stylesheet" />
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" />
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body data-offset="90" data-spy="scroll" data-target=".navbar-nav">
+	<div class="loader" id="loader-fade">
+		<div class="loader-container">
+			<ul class="loader-box">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+
+	<header>
+		<nav class="navbar navbar-top-default navbar-expand-lg static-nav transparent-bg nav-bottom-line">
+			<div class="container">
+				<div class="collapse navbar-collapse d-none d-lg-block">
+					<a href="index.html">
+						<img alt="logo" class="logo-scrolled" src="logo2.png" title="Logo" />
+					</a>
+					<ul class="nav navbar-nav newblog">
+						<a class="scroll nav-link" href="#home">BLOG / NEWSLETTER</a>
+					</ul>
+				</div>
+				<!-- <a class="scroll btn-setting btn-scale btn-green text-white d-none d-lg-block" href="#request">
+					E-BOOK GR&Aacute;TIS
+				</a>  -->
+			</div>
+		</nav>
+
+		<div class="side-menu">
+			<div class="inner-wrapper nav-icon">
+				<!-- <nav class="side-nav w-100">
+					<div class="navbar-nav">
+						<a class="scroll nav-link" href="#home">PRINCIPAL</a>
+						<a class="scroll nav-link" href="#aboutus">QUEM SOMOS</a>
+						<a class="scroll nav-link" href="#cases">VANTAGENS</a>
+						<a class="scroll nav-link" href="#prices">GALERIA</a>
+						<a class="scroll nav-link" href="#contact">FALE CONOSCO</a>
+					</div>
+				</nav> -->
+
+				<div class="side-footer text-white w-100">
+					<ul class="social-icons-simple">
+						<li class="side-menu-icons"></li>
+						<li class="side-menu-icons"></li>
+						<li class="side-menu-icons"></li>
+					</ul>
+
+					<p class="text-white">&copy; 2022 SELVA - Sistema Estruturado Legal de Valores Amaz&ocirc;nicos</p>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div id="box-public">
+		<div class="text">
+			<h1>Quer seu artigo publicado no Blog/Newsletter da SELVA?</h1>
+			<h3>Preencha os campos abaixo</h3>
+			<ion-icon onclick="hide()" name="close-outline"></ion-icon>
+		</div>
+		<div class="form">
+			<form action="https://selva-website-api.herokuapp.com/post" enctype="multipart/form-data" method="post">
+				<input type="text" name="name" id="name" placeholder="Nome" required>
+				<input type="text" placeholder="E-mail" required>
+				<textarea name="article" id="article" placeholder="Seu artigo ou notícia"></textarea>
+				<span>OU</span>
+				<input style="color: #fff;" type="file" name="doc" id="doc">
+				<button type="submit" id="btnSubmit">Enviar</button>
+			</form>
+		</div>
+	</div>
+
+	<div id="box-selvatico">
+		<div class="text">
+			<h1>Quer ser selvático?</h1>
+			<h3>Cadastre seu currículo</h3>
+			<ion-icon onclick="hide()" name="close-outline"></ion-icon>
+		</div>
+		<div class="form">
+			<form action="https://selva-website-api.herokuapp.com/resume" enctype="multipart/form-data" method="post">
+				<input type="text" name="name" id="name" placeholder="Nome" required>
+				<input type="text" placeholder="E-mail" required>
+				<input style="color: #fff;" type="file" name="doc" id="doc">
+				<button type="submit" id="btnSubmit">Cadastrar</button>
+			</form>
+		</div>
+	</div>
+
+	<button onclick="showNew()" class="publique">Publique aqui</button>
+	<button onclick="showSelva()" class="selvatico">Quer ser selvático?</button>
+	<button onclick="showMore()" class="mais">
+		<img src="./logo.png" width="100" alt="show more">
+	</button>
+
+	<section class="p-0 no-transition h-100vh" id="home">
+		<h2 class="d-none">heading</h2>
+
+		<div class="rev_slider_wrapper fullwidthbanner-container" id="revo_thumbs_wrapper">
+			<div class="rev_slider fullwidthabanner" data-version="5.4.1" id="secondary-banner" style="display:none;">
+				<ul><!-- SLIDE 1 -->
+					<li data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-fsmasterspeed="1500" data-index="rs-01" data-masterspeed="2000" data-param1="" data-slotamount="default" data-transition="fade">
+						<!-- MAIN IMAGE -->
+						<img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="0" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="banner2.jpg" /> <!-- LAYER NR. 1 -->
+						<div class="tp-caption tp-resizeme rs-parallaxlevel-8 bg-blue blue-box" data-frames="[{&quot;delay&quot;:319.921875,&quot;speed&quot;:500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-height="['500px','500px','425px','261px']" data-hoffset="['0','0','0','0']" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-textalign="['inherit','inherit','inherit','inherit']" data-voffset="['0','0','0','0']" data-whitespace="nowrap" data-width="['615px','615px','490px','292px']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index: 0;"></div>
+						<!-- LAYER NR. 2 -->
+
+						<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']" data-frames="[{&quot;delay&quot;:0,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1000" data-textalign="['left','left','center','center']" data-type="text" data-voffset="['-105','-105','-105','-90']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:1; font-weight: 300; color: #ffffff;font-family: 'Montserrat', sans-serif;">
+							Bem vindo ao nosso 
+						</div>
+
+						<div class="tp-caption tp-resizeme bg-blue" data-frames="[{&quot;delay&quot;:319.921875,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-height="['4px','4px','4px','4px']" data-hoffset="['0','0','5000','5000']" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-textalign="['inherit','inherit','inherit','inherit']" data-type="image" data-voffset="['70','0','0','30']" data-whitespace="nowrap" data-width="['45px','45px','45px','45px']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index: 0;">
+							<div class="rs-looped rs-slideloop d-none d-md-block" data-origin="50% 50%" data-speed="5" data-xe="10" data-xs="-10" data-ye="0" data-ys="0"></div>
+						</div>
+						<!-- LAYER NR. 3 -->
+
+						<div class="tp-caption tp-resizeme" data-fontsize="['100','100','100','85']" data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:-50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1500" data-textalign="['left','left','center','center']" data-type="text" data-voffset="['15','-35','-35','15']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:1; font-weight: 700; line-height: 60px; color: #ffffff;font-family: 'Montserrat', sans-serif;">
+							Blog &
+							<div class="rs-looped rs-slideloop d-none d-md-block" data-origin="50% 50%" data-speed="5" data-xe="10" data-xs="-10" data-ye="0" data-ys="0"> </div>
+						</div>
+						<div class="tp-caption tp-resizeme" data-fontsize="['100','100','100','85']" data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:-50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1500" data-textalign="['left','left','center','center']" data-type="text" data-voffset="['110','90','-35','120']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:1; font-weight: 700; line-height: 60px; color: #ffffff;font-family: 'Montserrat', sans-serif;">
+							Newsletter
+							<div class="rs-looped rs-slideloop d-none d-md-block" data-origin="50% 50%" data-speed="5" data-xe="10" data-xs="-10" data-ye="0" data-ys="0"> </div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-light-gray3" id="articles">
+		<div class="title">
+			<h1>Artigos</h1>
+		</div> <br><br>
+		<div class="new-box">
+			<div class="new-box-item">
+				<a href="./blog/selva.html">
+					<img src="/SELVA.png" alt="Artigo" width="800"><br><br>
+					<h3>UM DISRUPTIVO MODELO DE DESENVOLVIMENTO PARA O AMAZONAS: O PROJETO SELVA</h3>
+					<p>No Amazonas temos potencial para desenvolver, via economia verde, um mercado de escalabilidade global. Explico: ao passo que o Estado brasileiro fornece subsídios para o Polo Industrial de Manaus, esquece, no entanto, de adaptar sua política às oportunidades no ecossistema global de inovação.</p>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-light-gray3" id="articles">
+		<div class="title">
+			<h1>Notícias</h1>
+		</div> <br><br>
+		<div class="new-box">
+			<div class="new-box-item">
+				<a target="_blank" href="https://sebrae.com.br/sites/PortalSebrae/inovaamazonia/portfoliodeempresas/amazonas/selva-amazonic-blockchain-ecosystem,492d59d8b0681810VgnVCM100000d701210aRCRD">
+					<img src="./imgs/SELVA - SEBRAE.png" alt="Imagem Selva/Sebra" width="800"><br><br>
+					<h3>SELVA - Amazonic Blockchain Ecosystem está no portfólio de startups do Inova Amazônia (1a Edição)</h3>
+					<p>*Redirecionar para o site oficial do Sebrae</p>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="half-section p-0 mb-5" id="request">
+		<div class="container-fluid">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="main-title wow fadeIn" data-wow-delay="300ms">
+							<h2> Baixe <br><b> o ebook SELVA </b>  </h2>
+
+							<p>As features do<strong> SELVA</strong> ofecerem eco-soluções r&aacute;pidas e seguras para voc&ecirc; formalizar e gerar o green-compliance aos seus bioprodutos e servi&ccedil;os rurais.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row align-items-center" style="background-color: #091E2E;">
+				<div class="col-lg-6 col-md-12 p-0">
+					<div class="owl-carousel owl-theme owl-split">
+						<div class="item">
+							<div class="image split-blog-scale"><img alt="request" class="about-img" src="img1.jpeg" /></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-6 col-md-12 split-box-container-setting text-center p-md-0">
+					<div class="split-container-setting">
+						<div class="main-title text-center text-lg-left mb-lg-4 wow fadeIn" data-wow-delay="300ms">
+							<h5 class="mt-2rem" style="color: white;">Conhe&ccedil;a o <strong>SELVA</strong> e saiba como fazer parte dessa comunidade de a&ccedil;&otilde;es para desenvolvimento e transforma&ccedil;&atilde;o social da Amaz&ocirc;nia:</h5>
+						</div>
+
+						<div class="request-form">
+							<form action="https://selva-website-api.herokuapp.com/user" method="post" class="request-form-outer">
+								<div class="row">
+									<div class="col-md-12 col-sm-12">
+										<div class="request-form-textfield pb-4">
+											<input data-email class="form-control mb-0" id="nome" name="nome" placeholder="Nome" required type="text" />
+											<input data-email class="form-control mb-0" id="telefone" name="telefone" placeholder="Telefone" type="text" />
+											<input data-email class="form-control mb-0" id="email" name="email" placeholder="E-mail" type="email" />
+										</div>
+									</div>
+
+									<div class="col-md-12 col-sm-12">
+										<div class="request-form-textfield pb-4">
+											<select class="form-control" id="services" name="service" required="" title="service">
+												<option>Tipo de Usu&aacute;rio</option>
+												<option value="1">Produtor</option>
+												<option value="2">Investidor</option>
+												<option value="3">Pesquisador</option>
+												<option value="4">Outros</option> 
+											</select>
+										</div>
+									</div>
+
+									<div class="col-lg-12 pt-xs-25px text-lg-left text-center">
+										<a class="btn-setting btn-scale btn-blue text-white contact_btn" id="btnSubmit" target="_blank" href="https://www.selva.eco.br/ebook.pdf">
+											Baixar E-Book
+										</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="bg-green">
+        <span>Nos siga nas redes sociais</span>
+        <div class="redes-sociais">
+            <a href="https://www.linkedin.com/in/selva-am-4644321b1/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="https://www.instagram.com/selva.eco/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-instagram"></ion-icon></a>
+        </div>
+        <p class="copyrights px-0 py-5">&copy; 2022 SELVA - Sistema Estruturado Legal de Valores Amaz&ocirc;nicos</p>
+	</footer>
+
+	<script src="library-js/bundle.min.js"></script>
+	<script src="library-js/jquery.fancybox.min.js"></script>
+	<script src="library-js/owl.carousel.min.js"></script>
+	<script src="library-js/swiper.min.js"></script>
+	<script src="library-js/jquery.cubeportfolio.min.js"></script>
+	<script src="library-js/jquery.appear.js"></script>
+	<script src="library-js/parallaxie.min.js"></script>
+	<script src="library-js/wow.min.js"></script>
+	<script src="library-js/select2.min.js"></script>
+	<script src="library-js/slick.min.js"></script>
+	<script src="library-js/jquery.themepunch.tools.min.js"></script>
+	<script src="library-js/jquery.themepunch.revolution.min.js"></script>
+	<script src="library-js/revolution.extension.actions.min.js"></script>
+	<script src="library-js/revolution.extension.carousel.min.js"></script>
+	<script src="library-js/revolution.extension.kenburn.min.js"></script>
+	<script src="library-js/revolution.extension.layeranimation.min.js"></script>
+	<script src="library-js/revolution.extension.migration.min.js"></script>
+	<script src="library-js/revolution.extension.navigation.min.js"></script>
+	<script src="library-js/revolution.extension.parallax.min.js"></script>
+	<script src="library-js/revolution.extension.slideanims.min.js"></script>
+	<script src="library-js/revolution.extension.video.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgIfLQi8KTxTJahilcem6qHusV-V6XXjw"></script>
+	<script src="library-js/maps.min.js"></script>
+	<script src="library-js/contact_us.js"></script>
+	<script src="library-js/blog.js"></script>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
