@@ -69,6 +69,11 @@ header .start-ups {
     justify-content: space-around;
 }
 
+header .start-ups img {
+  margin-top: 30px;
+  filter: brightness(50);
+}
+
 header .arrow-back {
     position: absolute;
     left: 5.5rem;
