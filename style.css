@@ -3410,6 +3410,10 @@ ul.rounded li::before {
     color: #fff;
 }
 
+.webapp {
+    display: none;
+}
+
 /* ===================================
    Media Queries
 ====================================== */
@@ -3538,6 +3542,9 @@ ul.rounded li::before {
 
     .menu-mobile {
         display: inline-flex;
+    }
+    .webapp {
+        display: block;
     }
     .topbar {
         width: 0;
