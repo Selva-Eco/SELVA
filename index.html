@@ -27,7 +27,42 @@
 		<!-- <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 		// Add the new slick-theme.css if you want the default styling
 		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
-
+		<!-- <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+  		<link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"> -->
+		<style type="text/css">
+		
+			.slider {
+				width: 50%;
+				margin: 100px auto;
+			}
+		
+			.slick-slide {
+			  margin: 0px 20px;
+			}
+		
+			.slick-slide img {
+			  width: 100%;
+			}
+		
+			.slick-prev:before,
+			.slick-next:before {
+			  color: black;
+			}
+		
+		
+			.slick-slide {
+			  transition: all ease-in-out .3s;
+			  opacity: .2;
+			}
+			
+			.slick-active {
+			  opacity: .5;
+			}
+		
+			.slick-current {
+			  opacity: 1;
+			}
+		  </style>
 	</head>
 
 	<body data-offset="90" data-spy="scroll" data-target=".navbar-nav">
@@ -340,7 +375,7 @@
 									</div>
 								</div>
 								<div class="photo4">
-									<img src="../imgs/ti.jfif" alt="time SELVA">
+									<img src="../imgs/tim.jfif" alt="time SELVA">
 									<div class="text">
 										<h3>Timóteo <br> Bentes</h3><span>Dev FullStack</span><br><br>
 										<p class="tim">Natural de Manaus, no Amazonas. Cursando Ciência da Computação (Estácio), com especialidade em linguagem Solidity para Web 3.0, JavaScript, NodeJS, e MongoDB.</p>
@@ -660,7 +695,6 @@
 						<div class="col-md-12">
 							<div class="main-title wow fadeIn" data-wow-delay="300ms">
 								<h2> Nossos <b> Parceiros </b>  </h2>
-								<p>As features do<strong> SELVA</strong> ofecerem eco-soluções r&aacute;pidas e seguras para voc&ecirc; formalizar e gerar o green-compliance aos seus bioprodutos e servi&ccedil;os rurais.</p>
 							</div>
 						</div>
 					</div>
@@ -840,5 +874,9 @@
 		<script src="../library-js/script.js"></script>
 		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+		<script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+		
 	</body>
 </html>
