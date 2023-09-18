@@ -1,0 +1,87 @@
+
+<html>
+  <head>
+  <title>My Now Amazing Webpage</title>
+  <link href="./library-css/slick.css" rel="stylesheet" />
+  <link href="./library-css/slick-theme.css" rel="stylesheet" />
+  </head>
+  <body>
+
+  <div class="your-class">
+    <div style="font-size: 50px;">
+        <ion-icon name="home"></ion-icon>
+    </div>
+    <div style="font-size: 50px;">
+        <ion-icon name="person"></ion-icon>
+    </div>
+    <div style="font-size: 50px;">
+        <ion-icon name="car"></ion-icon>
+    </div>
+    <div style="font-size: 50px;">
+        <ion-icon name="home"></ion-icon>
+    </div>
+    <div style="font-size: 50px;">
+        <ion-icon name="person"></ion-icon>
+    </div>
+    <div style="font-size: 50px;">
+        <ion-icon name="car"></ion-icon>
+    </div>
+    <div style="font-size: 50px;">
+        <ion-icon name="home"></ion-icon>
+    </div>
+    <div style="font-size: 50px;">
+        <ion-icon name="person"></ion-icon>
+    </div>
+    <div style="font-size: 50px;">
+        <ion-icon name="car"></ion-icon>
+    </div>
+    <div style="font-size: 50px;">
+        <ion-icon name="home"></ion-icon>
+    </div>
+    <div style="font-size: 50px;">
+        <ion-icon name="person"></ion-icon>
+    </div>
+    <div style="font-size: 50px;">
+        <ion-icon name="car"></ion-icon>
+    </div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="./library-js/slick.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.your-class').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        responsive: [
+            {
+            breakpoint: 768,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3
+            }
+            },
+            {
+            breakpoint: 480,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+            }
+            }
+        ]
+      });
+    });
+  </script>
+
+  </body>
+</html>
+			

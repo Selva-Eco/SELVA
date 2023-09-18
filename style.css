@@ -3792,3 +3792,14 @@ ul.rounded li::before {
         width: 370px;
     }
 }
+
+.iten {
+    width: 175px !important;
+    height: 210px !important;
+}
+
+.slick-prev, .slick-next,
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+    background-color: #091E2E !important;
+    border-radius: 6px !important;
+}
