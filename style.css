@@ -3242,7 +3242,7 @@ ul.rounded li::before {
 
 .photos img {
     border-radius: 50%;
-    width: 15em;
+    width: 12.5em;
     margin-bottom: .5em;
 }
 
