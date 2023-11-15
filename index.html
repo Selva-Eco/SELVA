@@ -624,7 +624,7 @@
 			</div>
 		</section>
 
-		<section id="cases">
+		<!-- <section id="cases">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
@@ -721,6 +721,43 @@
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</section> -->
+
+		<section class="half-section p-0 mb-5" id="request">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="main-title wow fadeIn" data-wow-delay="300ms" style="margin-bottom: 0;">
+							<h2> Nossos <b> Parceiros </b>  </h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-8 mx-auto">
+				<div class="owl-carousel owl-theme">
+					<div class="item">
+						<div class="image" style="height: 100%;"><img alt="request" class="about-img sinapsebio" src="./assets/logo-sinapse.svg" /></div>
+					</div>
+					<div class="item">
+						<div class="image" style="height: 100%;"><img alt="request" class="about-img asiam" src="./assets/logo-asiam.svg" /></div>
+					</div>
+					<div class="item">
+						<div class="image" style="height: 100%;"><img alt="request" class="about-img centelha" src="./assets/logo-centelha.svg" /></div>
+					</div>
+					<div class="item">
+						<div class="image" style="height: 100%;"><img alt="request" class="about-img" src="./assets/logo-certi.svg" /></div>
+					</div>
+					<div class="item">
+						<div class="image" style="height: 100%;"><img alt="request" class="about-img" src="./assets/logo-fapeam.svg" /></div>
+					</div>
+					<div class="item">
+						<div class="image" style="height: 100%;"><img alt="request" class="about-img namazonia" src="./assets/logo-nova-amazonia.svg" /></div>
+					</div>
+					<div class="item">
+						<div class="image" style="height: 100%;"><img alt="request" class="about-img sebrae" src="./assets/logo-sebrae.svg" /></div>
 					</div>
 				</div>
 			</div>
@@ -907,5 +944,28 @@
 		<script src="../library-js/script.js"></script>
 		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+		<script>
+			$('.owl-carousel').owlCarousel({
+				loop: true,
+    			nav: true,
+				responsiveClass: true,
+				responsive: {
+					0: {
+						items: 1,
+						nav: true
+					},
+					600: {
+						items: 3,
+						nav: false
+					},
+					1000: {
+						items: 5,
+						nav: true,
+						loop: false
+					}
+				}
+			});
+		</script>
 	</body>
 </html>

@@ -3803,3 +3803,28 @@ ul.rounded li::before {
     background-color: #091E2E !important;
     border-radius: 6px !important;
 } */
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: 45% !important;
+    margin: 0 auto;
+}
+
+.owl-carousel .owl-item .sinapsebio,
+.owl-carousel .owl-item .asiam,
+.owl-carousel .owl-item .namazonia,
+.owl-carousel .owl-item .centelha {
+    width: 90% !important;
+}
+
+.owl-carousel .owl-item .sebrae {
+    width: 75% !important;
+}
+
+.owl-nav, .owl-dots {
+    display: none !important;
+}
+
+.owl-carousel .item {
+    height: 15em;
+}
