@@ -1,232 +1,378 @@
 <!DOCTYPE html>
 <html lang="pt">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<title>SELVA - Sistema Estruturado Legal de Valores Amaz&ocirc;nicos</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<link href="icon-16x16.png" rel="icon" sizes="16x16" />
-		<link href="icon-32x32.png" rel="icon" sizes="32x32" />
-		<link href="icon-48x48.png" rel="icon" sizes="48x48" />
-		<link href="icon-64x64.png" rel="icon" sizes="64x64" />
-		<link href="icon-128x128.png" rel="icon" sizes="128x128" />
-		<link href="../library-css/bundle.min.css" rel="stylesheet" />
-		<link href="../library-css/jquery.fancybox.min.css" rel="stylesheet" />
-		<link href="../library-css/owl.carousel.min.css" rel="stylesheet" />
-		<link href="../library-css/swiper.min.css" rel="stylesheet" />
-		<link href="../library-css/cubeportfolio.min.css" rel="stylesheet" />
-		<link href="../library-css/navigation.css" rel="stylesheet" />
-		<link href="../library-css/settings.css" rel="stylesheet" />
-		<link href="../library-css/slick.css" rel="stylesheet" />
-		<link href="../library-css/slick-theme.css" rel="stylesheet" />
-		<link href="../library-css/select2.min.css" rel="stylesheet" />
-		<link href="style.css" rel="stylesheet" />
-		<link href="../library-css/custom.css" type="text/css" rel="stylesheet" />
-		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" />
+	<title>SELVA - Sistema Estruturado Legal de Valores Amaz&ocirc;nicos</title>
 
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-LFB31GRS9G">
-		</script>
-		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+	<link href="icon-16x16.png" rel="icon" sizes="16x16" />
+	<link href="icon-32x32.png" rel="icon" sizes="32x32" />
+	<link href="icon-48x48.png" rel="icon" sizes="48x48" />
+	<link href="icon-64x64.png" rel="icon" sizes="64x64" />
+	<link href="icon-128x128.png" rel="icon" sizes="128x128" />
+	<link href="../library-css/bundle.min.css" rel="stylesheet" />
+	<link href="../library-css/jquery.fancybox.min.css" rel="stylesheet" />
+	<link href="../library-css/owl.carousel.min.css" rel="stylesheet" />
+	<link href="../library-css/swiper.min.css" rel="stylesheet" />
+	<link href="../library-css/cubeportfolio.min.css" rel="stylesheet" />
+	<link href="../library-css/navigation.css" rel="stylesheet" />
+	<link href="../library-css/settings.css" rel="stylesheet" />
+	<link href="../library-css/slick.css" rel="stylesheet" />
+	<link href="../library-css/slick-theme.css" rel="stylesheet" />
+	<link href="../library-css/select2.min.css" rel="stylesheet" />
+	<link href="style.css" rel="stylesheet" />
+	<link href="../library-css/custom.css" type="text/css" rel="stylesheet" />
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" />
 
-		gtag('config', 'G-LFB31GRS9G');
-		</script>
-	</head>
+	<!-- Google tag manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-NRXW74KS');
+	</script>
+	<!-- End Google Tag Manager -->
+</head>
 
-	<body data-offset="90" data-spy="scroll" data-target=".navbar-nav">
-		<div class="loader" id="loader-fade">
-			<div class="loader-container">
-				<ul class="loader-box">
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
-			</div>
+<body data-offset="90" data-spy="scroll" data-target=".navbar-nav">
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRXW74KS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div class="loader" id="loader-fade">
+		<div class="loader-container">
+			<ul class="loader-box">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
 		</div>
+	</div>
 
-		<header>
-			<nav class="navbar navbar-top-default navbar-expand-lg static-nav transparent-bg nav-bottom-line">
-				<div class="container nav-head">
-					<div class="menu-mobile">
-						<ion-icon name="list-outline"></ion-icon>
-					</div>
-					<div class="collapse navbar-collapse d-none d-lg-block">
-						<a href="index.html">
-							<img alt="logo" class="logo-scrolled" src="logo2.png" title="Logo" />
-						</a>
-						<ul class="nav navbar-nav ml-auto mr-4 topbar">
-							<li class="nav-item"><a class="scroll nav-link" href="#home">PRINCIPAL</a></li>
-							<li class="nav-item"><a class="scroll nav-link" href="#aboutus">QUEM SOMOS</a></li>
-							<li class="nav-item"><a class="scroll nav-link" href="#benefits">VANTAGENS</a></li>
-							<li class="nav-item"><a class="scroll nav-link" href="#cases">GALERIA</a></li>
-							<li class="nav-item"><a class="scroll nav-link" href="#contact">FALE CONOSCO</a></li>
-							<li class="nav-item"><a class=" nav-link" href="./blog.html">BLOG/NEWSLETTER</a></li>
-							<li class="nav-item"><a class=" nav-link webapp" href="https://selva.eco.br/app/">Web App</a></li>
-						</ul> 
-					</div>
-					<!-- scroll  -->
-					<a class="btn-setting btn-scale btn-green text-white d-none d-lg-block book" href="https://selva.eco.br/app/">
-						Web App
-					</a> 
-					<a class="menu_bars d-inline-block menu-bars-setting" id="sidemenu_toggle"> </a>
-
-					<div class="menu-lines"></div>
-					<a class="menu_bars d-inline-block menu-bars-setting" id="sidemenu_toggle"> </a>
+	<header>
+		<nav class="navbar navbar-top-default navbar-expand-lg static-nav transparent-bg nav-bottom-line">
+			<div class="container nav-head">
+				<div class="menu-mobile">
+					<ion-icon name="list-outline"></ion-icon>
 				</div>
-			</nav>
+				<div class="collapse navbar-collapse d-none d-lg-block">
+					<a href="index.html">
+						<img alt="logo" class="logo-scrolled" src="logo2.png" title="Logo" />
+					</a>
+					<ul class="nav navbar-nav ml-auto mr-4 topbar">
+						<li class="nav-item"><a class="scroll nav-link" href="#home">PRINCIPAL</a></li>
+						<li class="nav-item"><a class="scroll nav-link" href="#aboutus">QUEM SOMOS</a></li>
+						<li class="nav-item"><a class="scroll nav-link" href="#benefits">VANTAGENS</a></li>
+						<li class="nav-item"><a class="scroll nav-link" href="#cases">GALERIA</a></li>
+						<li class="nav-item"><a class="scroll nav-link" href="#contact">FALE CONOSCO</a></li>
+						<li class="nav-item"><a class=" nav-link" href="./blog.html">BLOG/NEWSLETTER</a></li>
+						<li class="nav-item"><a class=" nav-link webapp" href="https://selva.eco.br/app/">Web App</a>
+						</li>
+					</ul>
+				</div>
+				<!-- scroll  -->
+				<a class="btn-setting btn-scale btn-green text-white d-none d-lg-block book"
+					href="https://selva.eco.br/app/">
+					Web App
+				</a>
+				<a class="menu_bars d-inline-block menu-bars-setting" id="sidemenu_toggle"> </a>
 
-			<div class="side-menu">
-				<div class="inner-wrapper nav-icon">
-					<nav class="side-nav w-100">
-						<div class="navbar-nav"><a class="scroll nav-link" href="#home">PRINCIPAL</a> <a class="scroll nav-link" href="#aboutus">QUEM SOMOS</a> <a class="scroll nav-link" href="#cases">VANTAGENS</a> <a class="scroll nav-link" href="#prices">GALERIA</a> <a class="scroll nav-link" href="#contact">FALE CONOSCO</a></div>
-					</nav>
+				<div class="menu-lines"></div>
+				<a class="menu_bars d-inline-block menu-bars-setting" id="sidemenu_toggle"> </a>
+			</div>
+		</nav>
 
-					<div class="side-footer text-white w-100">
-						<ul class="social-icons-simple">
-							<li class="side-menu-icons"></li>
-							<li class="side-menu-icons"></li>
-							<li class="side-menu-icons"></li>
-						</ul>
+		<div class="side-menu">
+			<div class="inner-wrapper nav-icon">
+				<nav class="side-nav w-100">
+					<div class="navbar-nav"><a class="scroll nav-link" href="#home">PRINCIPAL</a> <a
+							class="scroll nav-link" href="#aboutus">QUEM SOMOS</a> <a class="scroll nav-link"
+							href="#cases">VANTAGENS</a> <a class="scroll nav-link" href="#prices">GALERIA</a> <a
+							class="scroll nav-link" href="#contact">FALE CONOSCO</a></div>
+				</nav>
 
-						<p class="text-white">&copy; 2022 SELVA - Sistema Estruturado Legal de Valores Amaz&ocirc;nicos</p>
-					</div>
+				<div class="side-footer text-white w-100">
+					<ul class="social-icons-simple">
+						<li class="side-menu-icons"></li>
+						<li class="side-menu-icons"></li>
+						<li class="side-menu-icons"></li>
+					</ul>
+
+					<p class="text-white">&copy; 2022 SELVA - Sistema Estruturado Legal de Valores Amaz&ocirc;nicos</p>
 				</div>
 			</div>
-		</header>
-
-		<div id="box-public">
-			<div class="text">
-				<h1>Quer seu artigo publicado no Blog/Newsletter da SELVA?</h1>
-				<h3>Preencha os campos abaixo</h3>
-				<ion-icon onclick="hide()" name="close-outline"></ion-icon>
-			</div>
-			<div class="form">
-				<form action="https://selva-website-api.herokuapp.com/post" enctype="multipart/form-data" method="post">
-					<input type="text" name="nome" id="nome" placeholder="Nome" required>
-					<input type="text" name="email" id="email" placeholder="E-mail" required>
-					<textarea name="article" id="article" placeholder="Seu artigo ou notícia"></textarea>
-					<span>OU</span>
-					<input style="color: #fff;" type="file" name="doc" id="doc">
-					<button type="submit" id="btnSubmit">Enviar</button>
-				</form>
-			</div>
 		</div>
+	</header>
 
-		<div id="box-selvatico">
-			<div class="text">
-				<h1>Quer ser selvático?</h1>
-				<h3>Cadastre seu currículo</h3>
-				<ion-icon onclick="hide()" name="close-outline"></ion-icon>
-			</div>
-			<div class="form">
-				<form action="https://selva-website-api.herokuapp.com/resume" enctype="multipart/form-data" method="post">
-					<input type="text" name="nome" id="nome" placeholder="Nome" required>
-					<input type="text" name="email" id="email" placeholder="E-mail" required>
-					<input style="color: #fff;" type="file" name="doc" id="doc">
-					<button type="submit" id="btnSubmit">Cadastrar</button>
-				</form>
-			</div>
+	<div id="box-public">
+		<div class="text">
+			<h1>Quer seu artigo publicado no Blog/Newsletter da SELVA?</h1>
+			<h3>Preencha os campos abaixo</h3>
+			<ion-icon onclick="hide()" name="close-outline"></ion-icon>
 		</div>
-	
-		<button onclick="showNew()" class="publique">Publique aqui</button>
-		<button onclick="showSelva()" class="selvatico">Quer ser selvático?</button>
-		<button onclick="showMore()" class="mais">
-			<img src="./logo.png" width="100" alt="show more">
-		</button>
+		<div class="form">
+			<form action="https://selva-website-api.herokuapp.com/post" enctype="multipart/form-data" method="post">
+				<input type="text" name="nome" id="nome" placeholder="Nome" required>
+				<input type="text" name="email" id="email" placeholder="E-mail" required>
+				<textarea name="article" id="article" placeholder="Seu artigo ou notícia"></textarea>
+				<span>OU</span>
+				<input style="color: #fff;" type="file" name="doc" id="doc">
+				<button type="submit" id="btnSubmit">Enviar</button>
+			</form>
+		</div>
+	</div>
 
-		<section class="p-0 no-transition h-100vh" id="home">
-			<h2 class="d-none">heading</h2>
+	<div id="box-selvatico">
+		<div class="text">
+			<h1>Quer ser selvático?</h1>
+			<h3>Cadastre seu currículo</h3>
+			<ion-icon onclick="hide()" name="close-outline"></ion-icon>
+		</div>
+		<div class="form">
+			<form action="https://selva-website-api.herokuapp.com/resume" enctype="multipart/form-data" method="post">
+				<input type="text" name="nome" id="nome" placeholder="Nome" required>
+				<input type="text" name="email" id="email" placeholder="E-mail" required>
+				<input style="color: #fff;" type="file" name="doc" id="doc">
+				<button type="submit" id="btnSubmit">Cadastrar</button>
+			</form>
+		</div>
+	</div>
 
-			<div class="rev_slider_wrapper fullwidthbanner-container" id="revo_thumbs_wrapper">
-				<div class="rev_slider fullwidthabanner" data-version="5.4.1" id="secondary-banner" style="display:none;">
-					<ul>
-						<!-- SLIDE 1 -->
-						<li data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-fsmasterspeed="1500" data-index="rs-01" data-masterspeed="2000" data-param1="" data-slotamount="default" data-transition="fade">
-							<!-- MAIN IMAGE -->
-							<img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="0" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="banner1.jpg" />
-							
-							<!-- LAYER NR. 1 -->
-							<div class="tp-caption tp-resizeme rs-parallaxlevel-8 bg-blue blue-box" data-frames="[{&quot;delay&quot;:319.921875,&quot;speed&quot;:500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-height="['500px','500px','425px','261px']" data-hoffset="['0','0','0','0']" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-textalign="['inherit','inherit','inherit','inherit']" data-voffset="['0','0','0','0']" data-whitespace="nowrap" data-width="['615px','615px','490px','292px']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index: 0;"></div>
-							<!-- LAYER NR. 2 -->
-							
-							<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']" data-frames="[{&quot;delay&quot;:0,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1000" data-textalign="['inherit','inherit','inherit','inherit']" data-type="image" data-voffset="['-105','-105','-105','-90']" data-whitespace="nowrap" data-width="['45px','45px','45px','45px']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" style="z-index:1;">
-								<img src="phoneWhite.svg" alt="SELVA app" class="phoneApp">
-							</div>
-							<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']" data-frames="[{&quot;delay&quot;:0,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1000" data-textalign="['left','left','center','center']" data-type="image" data-voffset="['10','10','10','-90']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:1;">
-								<img src="app-SELVA.svg" alt="SELVA app QRcode" class="QRcodeApp">
-							</div>
-							<div class="tp-caption tp-resizeme" data-fontsize="['15','15','15','5']" data-frames="[{&quot;delay&quot;:0,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1000" data-textalign="['left','left','center','center']" data-type="text" data-voffset="['140','140','140','-190']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:1; font-size: 5px; font-weight: 300; color: #ff0;font-family: 'Montserrat', sans-serif;">
-								<b class="android">*DISPONÍVEL APENAS PARA ANDROID</b>
-							</div>
-							<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','55']" data-frames="[{&quot;delay&quot;:0,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1000" data-textalign="['left','left','center','center']" data-type="text" data-voffset="['-190','-190','-190','-90']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:1; font-weight: 300; color: #ffffff;font-family: 'Montserrat', sans-serif;">
-								APP
-							</div>
+	<button onclick="showNew()" class="publique">Publique aqui</button>
+	<button onclick="showSelva()" class="selvatico">Quer ser selvático?</button>
+	<button onclick="showMore()" class="mais">
+		<img src="./logo.png" width="100" alt="show more">
+	</button>
 
-							<div class="tp-caption tp-resizeme bg-blue" data-frames="[{&quot;delay&quot;:319.921875,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-height="['4px','4px','4px','4px']" data-hoffset="['0','0','5000','5000']" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-textalign="['inherit','inherit','inherit','inherit']" data-type="image" data-voffset="['0','0','0','0']" data-whitespace="nowrap" data-width="['45px','45px','45px','45px']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index: 0;">
-								<div class="rs-looped rs-slideloop d-none d-md-block" data-origin="50% 50%" data-speed="5" data-xe="10" data-xs="-10" data-ye="0" data-ys="0"></div>
-							</div>
-							<!-- LAYER NR. 3 -->
+	<section class="p-0 no-transition h-100vh" id="home">
+		<h2 class="d-none">heading</h2>
 
-							<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','55']" data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:-50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1500" data-textalign="['left','left','center','center']" data-type="text" data-voffset="['-140','-140','-140','-35']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:1; font-weight: 700; line-height: 60px; color: #ffffff;font-family: 'Montserrat', sans-serif;">
-									SELVA
-								<div class="rs-looped rs-slideloop d-none d-md-block" data-origin="50% 50%" data-speed="5" data-xe="10" data-xs="-10" data-ye="0" data-ys="0"> </div>
-							</div>
-							<!-- LAYER NR. 4 -->
+		<div class="rev_slider_wrapper fullwidthbanner-container" id="revo_thumbs_wrapper">
+			<div class="rev_slider fullwidthabanner" data-version="5.4.1" id="secondary-banner" style="display:none;">
+				<ul>
+					<!-- SLIDE 1 -->
+					<!-- <li data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-fsmasterspeed="1500"
+						data-index="rs-01" data-masterspeed="2000" data-param1="" data-slotamount="default"
+						data-transition="fade">
+						MAIN IMAGE
+						<img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="0"
+							data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina=""
+							src="banner1.jpg" />
 
-							<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']" data-frames="[{&quot;delay&quot;:1500,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:[100%];opacity:1;&quot;,&quot;mask&quot;:&quot;x:[-100%];y:0;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;x:[100%];opacity:1;&quot;,&quot;mask&quot;:&quot;x:[-100%];y:0;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;}]" data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="2000" data-textalign="['left','left','center','center']" data-type="text" data-voffset="['40','40','40','40']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:1; font-weight: 500; line-height: 60px; color: #ffffff;font-family: 'Montserrat', sans-serif;"> </div>
-							<!-- LAYER NR. 5 -->
+						LAYER NR. 1
+						<div class="tp-caption tp-resizeme rs-parallaxlevel-8 bg-blue blue-box"
+							data-frames="[{&quot;delay&quot;:319.921875,&quot;speed&quot;:500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+							data-height="['500px','500px','425px','261px']" data-hoffset="['0','0','0','0']"
+							data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+							data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
+							data-textalign="['inherit','inherit','inherit','inherit']" data-voffset="['0','0','0','0']"
+							data-whitespace="nowrap" data-width="['615px','615px','490px','292px']"
+							data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']" style="z-index: 0;"></div>
+						LAYER NR. 2
 
-							<div class="tp-caption" data-hoffset="['0','0','0','0']" data-responsive_offset="['on','on','on','on']" data-splitin="none" data-splitout="none" data-start="1200" data-textalign="['center','center','center','center']" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="s:20;e:Power4.easeInOut;s:20;e:Power4.easeInOut;" data-type="text" data-voffset="['200','200','200','100']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']">
-								<a class="btn-setting btn-scale btn-white color-black" target="_blank" href="https://play.google.com/store/apps/details?id=com.selva.eco&hl=pt-BR&pli=1">
-									Baixe Aqui
-								</a>
-							</div>
-						</li>
-						<!-- SLIDE 2 -->
-						<li data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-fsmasterspeed="1500" data-index="rs-02" data-masterspeed="2000" data-param1="" data-slotamount="default" data-transition="fade"><!-- MAIN IMAGE --><img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="0" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="banner1.jpg" /> <!-- LAYER NR. 1 -->
-							<div class="tp-caption tp-resizeme rs-parallaxlevel-8 bg-blue blue-box" data-frames="[{&quot;delay&quot;:319.921875,&quot;speed&quot;:500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-height="['500px','500px','425px','261px']" data-hoffset="['0','0','0','0']" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-textalign="['inherit','inherit','inherit','inherit']" data-voffset="['0','0','0','0']" data-whitespace="nowrap" data-width="['615px','615px','490px','292px']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index: 0;"></div>
-							<!-- LAYER NR. 2 -->
+						<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']"
+							data-frames="[{&quot;delay&quot;:0,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+							data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none"
+							data-splitout="none" data-start="1000"
+							data-textalign="['inherit','inherit','inherit','inherit']" data-type="image"
+							data-voffset="['-105','-105','-105','-90']" data-whitespace="nowrap"
+							data-width="['45px','45px','45px','45px']" data-x="['left','left','left','left']"
+							data-y="['middle','middle','middle','middle']" style="z-index:1;">
+							<img src="phoneWhite.svg" alt="SELVA app" class="phoneApp">
+						</div>
+						<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']"
+							data-frames="[{&quot;delay&quot;:0,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+							data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none"
+							data-splitout="none" data-start="1000" data-textalign="['left','left','center','center']"
+							data-type="image" data-voffset="['10','10','10','-90']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']" style="z-index:1;">
+							<img src="app-SELVA.svg" alt="SELVA app QRcode" class="QRcodeApp">
+						</div>
+						<div class="tp-caption tp-resizeme" data-fontsize="['15','15','15','5']"
+							data-frames="[{&quot;delay&quot;:0,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+							data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none"
+							data-splitout="none" data-start="1000" data-textalign="['left','left','center','center']"
+							data-type="text" data-voffset="['140','140','140','-190']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']"
+							style="z-index:1; font-size: 5px; font-weight: 300; color: #ff0;font-family: 'Montserrat', sans-serif;">
+							<b class="android">*DISPONÍVEL APENAS PARA ANDROID</b>
+						</div>
+						<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','55']"
+							data-frames="[{&quot;delay&quot;:0,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+							data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none"
+							data-splitout="none" data-start="1000" data-textalign="['left','left','center','center']"
+							data-type="text" data-voffset="['-190','-190','-190','-90']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']"
+							style="z-index:1; font-weight: 300; color: #ffffff;font-family: 'Montserrat', sans-serif;">
+							APP
+						</div>
 
-							<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']" data-frames="[{&quot;delay&quot;:0,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1000" data-textalign="['left','left','center','center']" data-type="text" data-voffset="['-105','-105','-105','-90']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:1; font-weight: 300; color: #ffffff;font-family: 'Montserrat', sans-serif;">
-								e-book
-							</div>
+						<div class="tp-caption tp-resizeme bg-blue"
+							data-frames="[{&quot;delay&quot;:319.921875,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+							data-height="['4px','4px','4px','4px']" data-hoffset="['0','0','5000','5000']"
+							data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+							data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
+							data-textalign="['inherit','inherit','inherit','inherit']" data-type="image"
+							data-voffset="['0','0','0','0']" data-whitespace="nowrap"
+							data-width="['45px','45px','45px','45px']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']" style="z-index: 0;">
+							<div class="rs-looped rs-slideloop d-none d-md-block" data-origin="50% 50%" data-speed="5"
+								data-xe="10" data-xs="-10" data-ye="0" data-ys="0"></div>
+						</div>
+						LAYER NR. 3
 
-							<div class="tp-caption tp-resizeme bg-blue" data-frames="[{&quot;delay&quot;:319.921875,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-height="['4px','4px','4px','4px']" data-hoffset="['0','0','5000','5000']" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-textalign="['inherit','inherit','inherit','inherit']" data-type="image" data-voffset="['0','0','0','0']" data-whitespace="nowrap" data-width="['45px','45px','45px','45px']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index: 0;">
-								<div class="rs-looped rs-slideloop d-none d-md-block" data-origin="50% 50%" data-speed="5" data-xe="10" data-xs="-10" data-ye="0" data-ys="0"></div>
-							</div>
-							<!-- LAYER NR. 3 -->
+						<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','55']"
+							data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:-50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+							data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none"
+							data-splitout="none" data-start="1500" data-textalign="['left','left','center','center']"
+							data-type="text" data-voffset="['-140','-140','-140','-35']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']"
+							style="z-index:1; font-weight: 700; line-height: 60px; color: #ffffff;font-family: 'Montserrat', sans-serif;">
+							SELVA
+							<div class="rs-looped rs-slideloop d-none d-md-block" data-origin="50% 50%" data-speed="5"
+								data-xe="10" data-xs="-10" data-ye="0" data-ys="0"> </div>
+						</div>
+						LAYER NR. 4
 
-							<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']" data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:-50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1500" data-textalign="['left','left','center','center']" data-type="text" data-voffset="['-35','-35','-35','-35']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:1; font-weight: 700; line-height: 60px; color: #ffffff;font-family: 'Montserrat', sans-serif;">
-									SELVA
-								<div class="rs-looped rs-slideloop d-none d-md-block" data-origin="50% 50%" data-speed="5" data-xe="10" data-xs="-10" data-ye="0" data-ys="0"> </div>
-							</div>
-							<!-- LAYER NR. 4 -->
+						<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']"
+							data-frames="[{&quot;delay&quot;:1500,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:[100%];opacity:1;&quot;,&quot;mask&quot;:&quot;x:[-100%];y:0;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;x:[100%];opacity:1;&quot;,&quot;mask&quot;:&quot;x:[-100%];y:0;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;}]"
+							data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none"
+							data-splitout="none" data-start="2000" data-textalign="['left','left','center','center']"
+							data-type="text" data-voffset="['40','40','40','40']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']"
+							style="z-index:1; font-weight: 500; line-height: 60px; color: #ffffff;font-family: 'Montserrat', sans-serif;">
+						</div>
+						LAYER NR. 5
 
-							<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']" data-frames="[{&quot;delay&quot;:1500,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:[100%];opacity:1;&quot;,&quot;mask&quot;:&quot;x:[-100%];y:0;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;x:[100%];opacity:1;&quot;,&quot;mask&quot;:&quot;x:[-100%];y:0;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;}]" data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="2000" data-textalign="['left','left','center','center']" data-type="text" data-voffset="['40','40','40','40']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:1; font-weight: 500; line-height: 60px; color: #ffffff;font-family: 'Montserrat', sans-serif;"> </div>
-							<!-- LAYER NR. 5 -->
+						<div class="tp-caption" data-hoffset="['0','0','0','0']"
+							data-responsive_offset="['on','on','on','on']" data-splitin="none" data-splitout="none"
+							data-start="1200" data-textalign="['center','center','center','center']"
+							data-transform_idle="o:1;"
+							data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+							data-transform_out="s:20;e:Power4.easeInOut;s:20;e:Power4.easeInOut;" data-type="text"
+							data-voffset="['200','200','200','100']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']">
+							<a class="btn-setting btn-scale btn-white color-black" target="_blank"
+								href="https://play.google.com/store/apps/details?id=com.selva.eco&hl=pt-BR&pli=1">
+								Baixe Aqui
+							</a>
+						</div>
+					</li> -->
+					<!-- SLIDE 2 -->
+					<li data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-fsmasterspeed="1500"
+						data-index="rs-02" data-masterspeed="2000" data-param1="" data-slotamount="default"
+						data-transition="fade"><!-- MAIN IMAGE --><img alt="" class="rev-slidebg" data-bgfit="cover"
+							data-bgparallax="0" data-bgposition="center center" data-bgrepeat="no-repeat"
+							data-no-retina="" src="banner1.jpg" /> <!-- LAYER NR. 1 -->
+						<div class="tp-caption tp-resizeme rs-parallaxlevel-8 bg-blue blue-box"
+							data-frames="[{&quot;delay&quot;:319.921875,&quot;speed&quot;:500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+							data-height="['500px','500px','425px','261px']" data-hoffset="['0','0','0','0']"
+							data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+							data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
+							data-textalign="['inherit','inherit','inherit','inherit']" data-voffset="['0','0','0','0']"
+							data-whitespace="nowrap" data-width="['615px','615px','490px','292px']"
+							data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']" style="z-index: 0;"></div>
+						<!-- LAYER NR. 2 -->
 
-							<div class="tp-caption" data-hoffset="['0','0','0','0']" data-responsive_offset="['on','on','on','on']" data-splitin="none" data-splitout="none" data-start="1200" data-textalign="['center','center','center','center']" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="s:20;e:Power4.easeInOut;s:20;e:Power4.easeInOut;" data-type="text" data-voffset="['120','120','120','120']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']">
-								<a class="scroll btn-setting btn-scale btn-white color-black" href="#request">
-									Saiba Mais
-								</a>
-							</div>
-						</li>
-							<!-- SLIDE 3 -->
-						<li data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-fsmasterspeed="1500" data-index="rs-03" data-masterspeed="2000" data-param1="" data-slotamount="default" data-transition="fade"><!-- MAIN IMAGE --><img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="7" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="banner1.jpg" />
-							<div class="bg-overlay bg-black opacity-7"></div>
+						<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']"
+							data-frames="[{&quot;delay&quot;:0,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+							data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none"
+							data-splitout="none" data-start="1000" data-textalign="['left','left','center','center']"
+							data-type="text" data-voffset="['-105','-105','-105','-90']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']"
+							style="z-index:1; font-weight: 300; color: #ffffff;font-family: 'Montserrat', sans-serif;">
+							e-book
+						</div>
 
-							<div class="rs-background-video-layer" data-aspectratio="16:9" data-autoplay="true" data-autoplayonlyfirsttime="false" data-forcecover="1" data-forcerewind="on" data-videoheight="100%" data-videoloop="loopandnoslidestop" data-videomp4="consulting/video/video.mp4" data-videopreload="auto" data-videowebm="consulting/video/video.mp4" data-videowidth="100%" data-volume="mute"></div>
-							<!--If you need youtube video--> <!--<div class="rs-background-video-layer"
+						<div class="tp-caption tp-resizeme bg-blue"
+							data-frames="[{&quot;delay&quot;:319.921875,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+							data-height="['4px','4px','4px','4px']" data-hoffset="['0','0','5000','5000']"
+							data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+							data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
+							data-textalign="['inherit','inherit','inherit','inherit']" data-type="image"
+							data-voffset="['0','0','0','0']" data-whitespace="nowrap"
+							data-width="['45px','45px','45px','45px']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']" style="z-index: 0;">
+							<div class="rs-looped rs-slideloop d-none d-md-block" data-origin="50% 50%" data-speed="5"
+								data-xe="10" data-xs="-10" data-ye="0" data-ys="0"></div>
+						</div>
+						<!-- LAYER NR. 3 -->
+
+						<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']"
+							data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:-50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+							data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none"
+							data-splitout="none" data-start="1500" data-textalign="['left','left','center','center']"
+							data-type="text" data-voffset="['-35','-35','-35','-35']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']"
+							style="z-index:1; font-weight: 700; line-height: 60px; color: #ffffff;font-family: 'Montserrat', sans-serif;">
+							SELVA
+							<div class="rs-looped rs-slideloop d-none d-md-block" data-origin="50% 50%" data-speed="5"
+								data-xe="10" data-xs="-10" data-ye="0" data-ys="0"> </div>
+						</div>
+						<!-- LAYER NR. 4 -->
+
+						<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']"
+							data-frames="[{&quot;delay&quot;:1500,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:[100%];opacity:1;&quot;,&quot;mask&quot;:&quot;x:[-100%];y:0;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;x:[100%];opacity:1;&quot;,&quot;mask&quot;:&quot;x:[-100%];y:0;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;}]"
+							data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none"
+							data-splitout="none" data-start="2000" data-textalign="['left','left','center','center']"
+							data-type="text" data-voffset="['40','40','40','40']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']"
+							style="z-index:1; font-weight: 500; line-height: 60px; color: #ffffff;font-family: 'Montserrat', sans-serif;">
+						</div>
+						<!-- LAYER NR. 5 -->
+
+						<div class="tp-caption" data-hoffset="['0','0','0','0']"
+							data-responsive_offset="['on','on','on','on']" data-splitin="none" data-splitout="none"
+							data-start="1200" data-textalign="['center','center','center','center']"
+							data-transform_idle="o:1;"
+							data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+							data-transform_out="s:20;e:Power4.easeInOut;s:20;e:Power4.easeInOut;" data-type="text"
+							data-voffset="['120','120','120','120']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']">
+							<a class="scroll btn-setting btn-scale btn-white color-black" href="#request">
+								Saiba Mais
+							</a>
+						</div>
+					</li>
+					<!-- SLIDE 3 -->
+					<li data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-fsmasterspeed="1500"
+						data-index="rs-03" data-masterspeed="2000" data-param1="" data-slotamount="default"
+						data-transition="fade"><!-- MAIN IMAGE --><img alt="" class="rev-slidebg" data-bgfit="cover"
+							data-bgparallax="7" data-bgposition="center center" data-bgrepeat="no-repeat"
+							data-no-retina="" src="banner1.jpg" />
+						<div class="bg-overlay bg-black opacity-7"></div>
+
+						<div class="rs-background-video-layer" data-aspectratio="16:9" data-autoplay="true"
+							data-autoplayonlyfirsttime="false" data-forcecover="1" data-forcerewind="on"
+							data-videoheight="100%" data-videoloop="loopandnoslidestop"
+							data-videomp4="consulting/video/video.mp4" data-videopreload="auto"
+							data-videowebm="consulting/video/video.mp4" data-videowidth="100%" data-volume="mute"></div>
+						<!--If you need youtube video--> <!--<div class="rs-background-video-layer"
 									data-ytid="hEkiWaEp03k"
 									data-volume="mute"
 									data-forcerewind="on"
@@ -237,405 +383,598 @@
 									data-videoattributes="version=3&enablejsapi=1&html5=1&hd=1&autoplay=1&wmode=opaque&showinfo=0&rel=0&
 									origin=http://server.local"></div>-->
 
-							<div class="tp-caption tp-resizeme" data-fontsize="['50','50','50','45']" data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1000" data-textalign="['center','center','center','center']" data-transform_idle="o:1;" data-transform_in="x:-50px;opacity:0;s:2000;e:Power3.easeOut;" data-transform_out="s:300;e:Power3.easeInOut;s:300;e:Power3.easeInOut;" data-type="text" data-voffset="['-160','-160','-140','-140']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:1; font-weight: 300; color: #ffffff;font-family: 'Montserrat', sans-serif;">Sistema Estruturado</div>
+						<div class="tp-caption tp-resizeme" data-fontsize="['50','50','50','45']"
+							data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none"
+							data-splitout="none" data-start="1000"
+							data-textalign="['center','center','center','center']" data-transform_idle="o:1;"
+							data-transform_in="x:-50px;opacity:0;s:2000;e:Power3.easeOut;"
+							data-transform_out="s:300;e:Power3.easeInOut;s:300;e:Power3.easeInOut;" data-type="text"
+							data-voffset="['-160','-160','-140','-140']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']"
+							style="z-index:1; font-weight: 300; color: #ffffff;font-family: 'Montserrat', sans-serif;">
+							Sistema Estruturado</div>
 
-							<div class="tp-caption tp-resizeme" data-fontsize="['50','50','50','45']" data-hoffset="['0','0','0','0']" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1200" data-textalign="['center','center','center','center']" data-transform_idle="o:1;" data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:[100%];s:300;e:Power2.easeInOut;s:300;e:Power2.easeInOut;" data-type="text" data-voffset="['-80','-80','-70','-70']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:2; font-weight: 500; color: #ffffff;font-family: 'Montserrat', sans-serif;">Legal de Valores</div>
+						<div class="tp-caption tp-resizeme" data-fontsize="['50','50','50','45']"
+							data-hoffset="['0','0','0','0']" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+							data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1200"
+							data-textalign="['center','center','center','center']" data-transform_idle="o:1;"
+							data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;"
+							data-transform_out="y:[100%];s:300;e:Power2.easeInOut;s:300;e:Power2.easeInOut;"
+							data-type="text" data-voffset="['-80','-80','-70','-70']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']"
+							style="z-index:2; font-weight: 500; color: #ffffff;font-family: 'Montserrat', sans-serif;">
+							Legal de Valores</div>
 
-							<div class="tp-caption tp-resizeme" data-fontsize="['50','50','50','45']" data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1000" data-textalign="['center','center','center','center']" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="s:300;e:Power2.easeInOut;s:300;e:Power2.easeInOut;" data-type="text" data-voffset="['5','5','0','0']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:3; font-weight: 300; color: #ffffff;font-family: 'Montserrat', sans-serif;">Amaz&ocirc;nicos - SELVA</div>
+						<div class="tp-caption tp-resizeme" data-fontsize="['50','50','50','45']"
+							data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none"
+							data-splitout="none" data-start="1000"
+							data-textalign="['center','center','center','center']" data-transform_idle="o:1;"
+							data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+							data-transform_out="s:300;e:Power2.easeInOut;s:300;e:Power2.easeInOut;" data-type="text"
+							data-voffset="['5','5','0','0']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']"
+							style="z-index:3; font-weight: 300; color: #ffffff;font-family: 'Montserrat', sans-serif;">
+							Amaz&ocirc;nicos - SELVA</div>
 
-							<div class="tp-caption tp-resizeme" data-fontsize="['22','22','18','16']" data-hoffset="['0','0','0','0']" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1500" data-textalign="['center','center','center','center']" data-transform_idle="o:1;" data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:2;sY:2;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;" data-transform_out="s:300;e:Power3.easeInOut;s:300;e:Power3.easeInOut;" data-type="text" data-voffset="['80','80','70','60']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:4; font-weight: 200; color: #ffffff; line-height:30px; font-family: 'Montserrat', sans-serif;">Plataforma digital para gest&atilde;o<br />
+						<div class="tp-caption tp-resizeme" data-fontsize="['22','22','18','16']"
+							data-hoffset="['0','0','0','0']" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+							data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1500"
+							data-textalign="['center','center','center','center']" data-transform_idle="o:1;"
+							data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:2;sY:2;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"
+							data-transform_out="s:300;e:Power3.easeInOut;s:300;e:Power3.easeInOut;" data-type="text"
+							data-voffset="['80','80','70','60']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']"
+							style="z-index:4; font-weight: 200; color: #ffffff; line-height:30px; font-family: 'Montserrat', sans-serif;">
+							Plataforma digital para gest&atilde;o<br />
 							eficiente dos ativos naturais da Amaz&ocirc;nia.</div>
 
-							<div class="tp-caption tp-resizeme" data-frames="[{&quot;delay&quot;:600,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;sX:1;sY:1;opacity:0;fb:40px;&quot;,&quot;to&quot;:&quot;o:1;fb:0;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;fb:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-hoffset="['0','0','0','0']" data-textalign="['center','center','center','center']" data-voffset="['190','190','170','170']" data-width="['160','160','160','160']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:5; max-width: 960px"><a class="btn-setting btn-scale btn-blue text-white" href="javascript:void(0)">Saiba mais</a></div>
-						</li>
-						<!-- SLIDE 4 -->
-						<li data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-fsmasterspeed="1500" data-index="rs-04" data-masterspeed="2000" data-param1="" data-slotamount="default" data-transition="fade"><!-- MAIN IMAGE --><img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="0" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="banner1.jpg" />
-							<div class="bg-overlay bg-black opacity-7"></div>
-							<!-- LAYER NR. 1 -->
+						<div class="tp-caption tp-resizeme"
+							data-frames="[{&quot;delay&quot;:600,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;sX:1;sY:1;opacity:0;fb:40px;&quot;,&quot;to&quot;:&quot;o:1;fb:0;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;fb:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+							data-hoffset="['0','0','0','0']" data-textalign="['center','center','center','center']"
+							data-voffset="['190','190','170','170']" data-width="['160','160','160','160']"
+							data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']" style="z-index:5; max-width: 960px"><a
+								class="btn-setting btn-scale btn-blue text-white" href="javascript:void(0)">Saiba
+								mais</a></div>
+					</li>
+					<!-- SLIDE 4 -->
+					<li data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-fsmasterspeed="1500"
+						data-index="rs-04" data-masterspeed="2000" data-param1="" data-slotamount="default"
+						data-transition="fade"><!-- MAIN IMAGE --><img alt="" class="rev-slidebg" data-bgfit="cover"
+							data-bgparallax="0" data-bgposition="center center" data-bgrepeat="no-repeat"
+							data-no-retina="" src="banner1.jpg" />
+						<div class="bg-overlay bg-black opacity-7"></div>
+						<!-- LAYER NR. 1 -->
 
-							<div class="tp-caption tp-resizeme rs-parallaxlevel-8 bg-green blue-box" data-frames="[{&quot;delay&quot;:319.921875,&quot;speed&quot;:500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-height="['500px','500px','425px','261px']" data-hoffset="['-160','-160','0','0']" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-textalign="['inherit','inherit','inherit','inherit']" data-voffset="['0','0','0','10']" data-whitespace="nowrap" data-width="['615px','615px','490px','292px']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index: 0;"></div>
-							<!-- LAYER NR. 2 -->
+						<div class="tp-caption tp-resizeme rs-parallaxlevel-8 bg-green blue-box"
+							data-frames="[{&quot;delay&quot;:319.921875,&quot;speed&quot;:500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+							data-height="['500px','500px','425px','261px']" data-hoffset="['-160','-160','0','0']"
+							data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+							data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
+							data-textalign="['inherit','inherit','inherit','inherit']" data-voffset="['0','0','0','10']"
+							data-whitespace="nowrap" data-width="['615px','615px','490px','292px']"
+							data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']" style="z-index: 0;"></div>
+						<!-- LAYER NR. 2 -->
 
-							<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']" data-frames="[{&quot;delay&quot;:0,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-hoffset="['70','70','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1000" data-textalign="['right','right','center','center']" data-type="text" data-voffset="['-120','-120','-90','-90']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['right','right','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:1; font-weight: 300; color: #ffffff;font-family: 'Montserrat', sans-serif;">Solu&ccedil;&otilde;es Digitais</div>
+						<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']"
+							data-frames="[{&quot;delay&quot;:0,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+							data-hoffset="['70','70','0','0']" data-responsive_offset="on" data-splitin="none"
+							data-splitout="none" data-start="1000" data-textalign="['right','right','center','center']"
+							data-type="text" data-voffset="['-120','-120','-90','-90']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['right','right','center','center']"
+							data-y="['middle','middle','middle','middle']"
+							style="z-index:1; font-weight: 300; color: #ffffff;font-family: 'Montserrat', sans-serif;">
+							Solu&ccedil;&otilde;es Digitais</div>
 
-							<div class="tp-caption tp-resizeme bg-blue" data-frames="[{&quot;delay&quot;:319.921875,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-height="['4px','4px','4px','4px']" data-hoffset="['505','505','5000','5000']" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-textalign="['inherit','inherit','inherit','inherit']" data-type="image" data-voffset="['-35','-35','-35','-35']" data-whitespace="nowrap" data-width="['45px','45px','45px','45px']" data-x="['right','right','center','center']" data-y="['middle','middle','middle','middle']" style="z-index: 0;">
-							<div class="rs-looped rs-slideloop d-none d-md-block" data-origin="50% 50%" data-speed="5" data-xe="10" data-xs="-10" data-ye="0" data-ys="0"></div>
-							</div>
-							<!-- LAYER NR. 3 -->
+						<div class="tp-caption tp-resizeme bg-blue"
+							data-frames="[{&quot;delay&quot;:319.921875,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+							data-height="['4px','4px','4px','4px']" data-hoffset="['505','505','5000','5000']"
+							data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+							data-paddingtop="[0,0,0,0]" data-responsive_offset="on"
+							data-textalign="['inherit','inherit','inherit','inherit']" data-type="image"
+							data-voffset="['-35','-35','-35','-35']" data-whitespace="nowrap"
+							data-width="['45px','45px','45px','45px']" data-x="['right','right','center','center']"
+							data-y="['middle','middle','middle','middle']" style="z-index: 0;">
+							<div class="rs-looped rs-slideloop d-none d-md-block" data-origin="50% 50%" data-speed="5"
+								data-xe="10" data-xs="-10" data-ye="0" data-ys="0"></div>
+						</div>
+						<!-- LAYER NR. 3 -->
 
-							<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']" data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-hoffset="['75','75','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1500" data-textalign="['right','right','center','center']" data-type="text" data-voffset="['-40','-40','-40','-40']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['right','right','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:1; font-weight: 300; line-height: 60px; color: #ffffff;font-family: 'Montserrat', sans-serif;">para a Gest&atilde;o &amp;
-							<div class="rs-looped rs-slideloop d-none d-md-block" data-origin="50% 50%" data-speed="5" data-xe="10" data-xs="-10" data-ye="0" data-ys="0"></div>
-							</div>
-							<!-- LAYER NR. 4 -->
+						<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']"
+							data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+							data-hoffset="['75','75','0','0']" data-responsive_offset="on" data-splitin="none"
+							data-splitout="none" data-start="1500" data-textalign="['right','right','center','center']"
+							data-type="text" data-voffset="['-40','-40','-40','-40']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['right','right','center','center']"
+							data-y="['middle','middle','middle','middle']"
+							style="z-index:1; font-weight: 300; line-height: 60px; color: #ffffff;font-family: 'Montserrat', sans-serif;">
+							para a Gest&atilde;o &amp;
+							<div class="rs-looped rs-slideloop d-none d-md-block" data-origin="50% 50%" data-speed="5"
+								data-xe="10" data-xs="-10" data-ye="0" data-ys="0"></div>
+						</div>
+						<!-- LAYER NR. 4 -->
 
-							<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']" data-frames="[{&quot;delay&quot;:1500,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:[100%];opacity:1;&quot;,&quot;mask&quot;:&quot;x:[-100%];y:0;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;x:[100%];opacity:1;&quot;,&quot;mask&quot;:&quot;x:[-100%];y:0;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;}]" data-hoffset="['70','70','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="2000" data-textalign="['right','right','center','center']" data-type="text" data-voffset="['60','60','60','60']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['right','right','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:1; font-weight: 500; line-height: 65px; color: #ffffff;font-family: 'Montserrat', sans-serif;">Compliance do<br />
+						<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']"
+							data-frames="[{&quot;delay&quot;:1500,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:[100%];opacity:1;&quot;,&quot;mask&quot;:&quot;x:[-100%];y:0;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;x:[100%];opacity:1;&quot;,&quot;mask&quot;:&quot;x:[-100%];y:0;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;}]"
+							data-hoffset="['70','70','0','0']" data-responsive_offset="on" data-splitin="none"
+							data-splitout="none" data-start="2000" data-textalign="['right','right','center','center']"
+							data-type="text" data-voffset="['60','60','60','60']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['right','right','center','center']"
+							data-y="['middle','middle','middle','middle']"
+							style="z-index:1; font-weight: 500; line-height: 65px; color: #ffffff;font-family: 'Montserrat', sans-serif;">
+							Compliance do<br />
 							Agroneg&oacute;cio.</div>
-							<!-- LAYER NR. 5 -->
+						<!-- LAYER NR. 5 -->
 
-							<div class="tp-caption tp-resizeme" data-hoffset="['60','60','0','0']" data-responsive_offset="['on','on','on','on']" data-splitin="none" data-splitout="none" data-start="1200" data-textalign="['center','center','center','center']" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="s:20;e:Power4.easeInOut;s:20;e:Power4.easeInOut;" data-voffset="['200','200','200','200']" data-width="['320','320','320','320']" data-x="['right','right','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:99; min-width: 960px; max-width: 960px"><a class="btn-setting btn-scale btn-white color-black" href="javascript:void(0)">Comece agora</a> <a class="btn-setting btn-scale btn-blue text-white" href="javascript:void(0)">Saiba mais</a></div>
-						</li>
-						<!-- SLIDE 5 -->
-						<li data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-fsmasterspeed="1500" data-index="rs-05" data-masterspeed="2000" data-param1="" data-slotamount="default" data-transition="fade"><!-- MAIN IMAGE --><img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="0" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="banner1.jpg" />
-							<div class="bg-overlay bg-black opacity-7"></div>
-							<!-- LAYER NR. 2 -->
+						<div class="tp-caption tp-resizeme" data-hoffset="['60','60','0','0']"
+							data-responsive_offset="['on','on','on','on']" data-splitin="none" data-splitout="none"
+							data-start="1200" data-textalign="['center','center','center','center']"
+							data-transform_idle="o:1;"
+							data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+							data-transform_out="s:20;e:Power4.easeInOut;s:20;e:Power4.easeInOut;"
+							data-voffset="['200','200','200','200']" data-width="['320','320','320','320']"
+							data-x="['right','right','center','center']" data-y="['middle','middle','middle','middle']"
+							style="z-index:99; min-width: 960px; max-width: 960px"><a
+								class="btn-setting btn-scale btn-white color-black" href="javascript:void(0)">Comece
+								agora</a> <a class="btn-setting btn-scale btn-blue text-white"
+								href="javascript:void(0)">Saiba mais</a></div>
+					</li>
+					<!-- SLIDE 5 -->
+					<li data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-fsmasterspeed="1500"
+						data-index="rs-05" data-masterspeed="2000" data-param1="" data-slotamount="default"
+						data-transition="fade"><!-- MAIN IMAGE --><img alt="" class="rev-slidebg" data-bgfit="cover"
+							data-bgparallax="0" data-bgposition="center center" data-bgrepeat="no-repeat"
+							data-no-retina="" src="banner1.jpg" />
+						<div class="bg-overlay bg-black opacity-7"></div>
+						<!-- LAYER NR. 2 -->
 
-							<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']" data-frames="[{&quot;delay&quot;:0,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1000" data-textalign="['center','center','center','center']" data-type="text" data-voffset="['-145','-145','-145','-145']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:1; font-weight: 300; color: #ffffff;font-family: 'Montserrat', sans-serif;">SELVA</div>
-							<!-- LAYER NR. 3 -->
+						<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']"
+							data-frames="[{&quot;delay&quot;:0,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+							data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none"
+							data-splitout="none" data-start="1000"
+							data-textalign="['center','center','center','center']" data-type="text"
+							data-voffset="['-145','-145','-145','-145']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']"
+							style="z-index:1; font-weight: 300; color: #ffffff;font-family: 'Montserrat', sans-serif;">
+							SELVA</div>
+						<!-- LAYER NR. 3 -->
 
-							<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']" data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="1500" data-textalign="['center','center','center','center']" data-type="text" data-voffset="['-40','-40','-40','-40']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:1; font-weight: 500; line-height: 60px; color: #ffffff;font-family: 'Montserrat', sans-serif;">Otimiza a Comercializa&ccedil;&atilde;o<br />
+						<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']"
+							data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+							data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none"
+							data-splitout="none" data-start="1500"
+							data-textalign="['center','center','center','center']" data-type="text"
+							data-voffset="['-40','-40','-40','-40']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']"
+							style="z-index:1; font-weight: 500; line-height: 60px; color: #ffffff;font-family: 'Montserrat', sans-serif;">
+							Otimiza a Comercializa&ccedil;&atilde;o<br />
 							da Produ&ccedil;&atilde;o Rural</div>
-							<!-- LAYER NR. 4 -->
+						<!-- LAYER NR. 4 -->
 
-							<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']" data-frames="[{&quot;delay&quot;:1500,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:[100%];opacity:1;&quot;,&quot;mask&quot;:&quot;x:[-100%];y:0;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;x:[100%];opacity:1;&quot;,&quot;mask&quot;:&quot;x:[-100%];y:0;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;}]" data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="2000" data-textalign="['center','center','center','center']" data-type="text" data-voffset="['90','90','90','90']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:1; font-weight: 300; line-height: 60px; color: #ffffff;font-family: 'Montserrat', sans-serif;">Atrav&eacute;s dos<br />
+						<div class="tp-caption tp-resizeme" data-fontsize="['55','55','55','35']"
+							data-frames="[{&quot;delay&quot;:1500,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:[100%];opacity:1;&quot;,&quot;mask&quot;:&quot;x:[-100%];y:0;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;x:[100%];opacity:1;&quot;,&quot;mask&quot;:&quot;x:[-100%];y:0;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;}]"
+							data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none"
+							data-splitout="none" data-start="2000"
+							data-textalign="['center','center','center','center']" data-type="text"
+							data-voffset="['90','90','90','90']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']"
+							style="z-index:1; font-weight: 300; line-height: 60px; color: #ffffff;font-family: 'Montserrat', sans-serif;">
+							Atrav&eacute;s dos<br />
 							Contratos Inteligentes</div>
-							<!-- LAYER NR. 5 -->
+						<!-- LAYER NR. 5 -->
 
-							<div class="tp-caption tp-resizeme" data-fontsize="['22','22','24','16']" data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none" data-splitout="none" data-start="800" data-textalign="['center','center','center','center']" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="s:20;e:Power4.easeInOut;s:20;e:Power4.easeInOut;" data-type="text" data-voffset="['180','180','180','180']" data-whitespace="nowrap" data-width="['none','none','none','none']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:4; font-weight: 200; line-height: 60px; color: #ffffff;font-family: 'Montserrat', sans-serif;">Uma Solu&ccedil;&atilde;o Sustent&aacute;vel Inclusiva e Exclusiva.</div>
-							<!-- LAYER NR. 6 -->
+						<div class="tp-caption tp-resizeme" data-fontsize="['22','22','24','16']"
+							data-hoffset="['0','0','0','0']" data-responsive_offset="on" data-splitin="none"
+							data-splitout="none" data-start="800" data-textalign="['center','center','center','center']"
+							data-transform_idle="o:1;"
+							data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+							data-transform_out="s:20;e:Power4.easeInOut;s:20;e:Power4.easeInOut;" data-type="text"
+							data-voffset="['180','180','180','180']" data-whitespace="nowrap"
+							data-width="['none','none','none','none']" data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']"
+							style="z-index:4; font-weight: 200; line-height: 60px; color: #ffffff;font-family: 'Montserrat', sans-serif;">
+							Uma Solu&ccedil;&atilde;o Sustent&aacute;vel Inclusiva e Exclusiva.</div>
+						<!-- LAYER NR. 6 -->
 
-							<div class="tp-caption tp-resizeme" data-frames="[{&quot;delay&quot;:600,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;sX:1;sY:1;opacity:0;fb:40px;&quot;,&quot;to&quot;:&quot;o:1;fb:0;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;fb:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]" data-hoffset="['0','0','0','0']" data-textalign="['center','center','center','center']" data-voffset="['270','270','270','270']" data-width="['180','180','180','180']" data-x="['center','center','center','center']" data-y="['middle','middle','middle','middle']" style="z-index:99; max-width: 960px"><a class="scroll btn-setting btn-scale btn-green text-white" href="#aboutus">Leia mais</a></div>
-						</li>
-					</ul>
-				</div>
+						<div class="tp-caption tp-resizeme"
+							data-frames="[{&quot;delay&quot;:600,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;sX:1;sY:1;opacity:0;fb:40px;&quot;,&quot;to&quot;:&quot;o:1;fb:0;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;fb:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+							data-hoffset="['0','0','0','0']" data-textalign="['center','center','center','center']"
+							data-voffset="['270','270','270','270']" data-width="['180','180','180','180']"
+							data-x="['center','center','center','center']"
+							data-y="['middle','middle','middle','middle']" style="z-index:99; max-width: 960px"><a
+								class="scroll btn-setting btn-scale btn-green text-white" href="#aboutus">Leia mais</a>
+						</div>
+					</li>
+				</ul>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<section class="bg-light-gray3" id="aboutus">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="main-title wow fadeIn" data-wow-delay="300ms">
-							<h2>Quem <b>Somos</b></h2>
+	<section class="bg-light-gray3" id="aboutus">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="main-title wow fadeIn" data-wow-delay="300ms">
+						<h2>Quem <b>Somos</b></h2>
 
-							<p>O <strong>SELVA</strong> (Sistema Estruturado Legal de Valores Amaz&ocirc;nicos) &eacute; uma startup que instrumentaliza e certifica a comercializa&ccedil;&atilde;o dos ativos naturais da Amaz&ocirc;nia, atrav&eacute;s dos Contratos Inteligentes, que possibilitam seguran&ccedil;a,facilidade e menor custo para seus neg&oacute;cios. Nossa miss&atilde;o &eacute; gerar Valor de Incentivo &agrave; Amaz&ocirc;nia, por meio da implementa&ccedil;&atilde;o de uma economia sustent&aacute;vel e de impacto social para regi&atilde;o.</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-12">
-						<div class="main-title wow fadeIn" data-wow-delay="300ms">
-							<h2><b>Time</b> SELVA</h2>
-
-							<div class="photos">
-								<div class="photo1">
-									<img src="../imgs/ra.jfif" alt="time SELVA">
-									<div class="text">
-										<h3>Rafael <br> Paixão</h3><span><i>Founder & CEO</i></span><br><br>
-										<p class="rafa">Amazonense, advogado e professor. Doutorando em Biotecnologia (UFAM). Mestre em Direito Político e Econômico (Mackenzie). Programador de Contratos Inteligentes em Blockchain Ethereum.</p>
-									</div>
-								</div>
-								<div class="photo2">
-									<img src="../imgs/carol.jfif" alt="time SELVA">
-									<div class="text">
-										<h3>Carol <br> Queiroz</h3><span><i>Designer</i></span><br><br>
-										<p class="carol">Designer UX/UI, Diretora de Comunicação da ASIAM (Associação de Startups da Amazônia), Founder Agência VOLER. Atua no ecossistema com projetos focados na Amazônia e posicionamento da marca.</p>
-									</div>
-								</div>
-								<div class="photo3">
-									<img src="../imgs/me.jfif" alt="time SELVA">
-									<div class="text">
-										<h3>Mérilin Cavalcanti</h3><span><i>Publicitária</i></span><br><br>
-										<p class="mel">Serviço Social. Graduanda de Publicidade e Propaganda. Amazonense e contribuente para o ecossistema com empreendedorismo e pesquisas cientéficas.</p>
-									</div>
-								</div>
-								<div class="photo3">
-									<img src="../imgs/gui2.jfif" alt="time SELVA">
-									<div class="text">
-										<h3>Guilherme Fernandes</h3><span><i>Dev FullStack Jr</i></span><br><br>
-										<p class="mel">Cursando ADS (Análise e Desenvolvimento de sistemas) pela FIAP SP, com especialidade em sistemas Cloud AWS para serviços de web entre cliente e servidor.</p>
-									</div>
-								</div>
-								<div class="photo4">
-									<img src="../imgs/tim.jfif" alt="time SELVA">
-									<div class="text">
-										<h3>Timóteo <br> Bentes</h3><span><i>Dev FullStack Jr</i></span><br><br>
-										<p class="tim">Natural de Manaus, no Amazonas. Cursando Ciência da Computação (Estácio), com especialidade em linguagem Solidity para Web 3.0, JavaScript, NodeJS, e MongoDB.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-		
-				<span id="benefits"></span><br><br>
-				<div class="main-title wow fadeIn" data-wow-delay="300ms">
-					<h2><b>Vantagens</b></h2>
-				</div>
-				<div class="row" >
-					<div class="main-title wow fadeIn" data-wow-delay="300ms"></div>
-					<div class="col-md-3 col-sm-12 mb-xs-2rem">
-						<div class="about-box center-block wow zoomIn" data-wow-delay="400ms">
-							<div class="about-opacity-icon"></div>
-
-							<div class="about-main-icon pb-4"><img src="icon1.png" /></div>
-
-							<h5 class="mb-0"><b>Impacto Social</b></h5>
-
-							<p style="margin-top:10px">Conectar os dados das comunidades as novas tecnologias e com&eacute;rcios de bioprodutos.</p>
-						</div>
-					</div>
-
-					<div class="col-md-3 col-sm-12 mb-xs-2rem">
-						<div class="about-box center-block wow zoomIn" data-wow-delay="500ms">
-							<div class="about-opacity-icon"></div>
-
-							<div class="about-main-icon pb-4"><img src="icon2.png" /></div>
-
-							<h5 class="mb-0"><b>Sustentabilidade</b></h5>
-
-							<p style="margin-top:10px">Novas oportunidades, outras formas de produzir, interagir e gerar valor.</p>
-						</div>
-					</div>
-
-					<div class="col-md-3 col-sm-12 mb-xs-2rem">
-						<div class="about-box center-block wow zoomIn" data-wow-delay="600ms">
-							<div class="about-opacity-icon"></div>
-
-							<div class="about-main-icon pb-4"><img src="icon3.png" /></div>
-
-							<h5 class="mb-0"><b>Economia Verde</b></h5>
-
-							<p style="margin-top:10px">Possibilita prote&ccedil;&atilde;o ambiental e igualdade social, reduzindo os impactos ao meio ambiente.</p>
-						</div>
-					</div>
-
-					<div class="col-md-3 col-sm-12">
-						<div class="about-box center-block wow zoomIn" data-wow-delay="700ms">
-							<div class="about-opacity-icon"></div>
-
-							<div class="about-main-icon pb-4"><img src="icon4.png" /></div>
-
-							<h5 class="mb-0"><b>Seguran&ccedil;a Jur&iacute;dica</b></h5>
-
-							<p style="margin-top:10px">Seus documentos arquivados em um sistema de seguran&ccedil;a de ultima gera&ccedil;&atilde;o. Isso evita a perda ou modifica&ccedil;&atilde;o de itens sem a permiss&atilde;o das partes envolvidas.</p>
-						</div>
+						<p>O <strong>SELVA</strong> (Sistema Estruturado Legal de Valores Amaz&ocirc;nicos) &eacute; uma
+							startup que instrumentaliza e certifica a comercializa&ccedil;&atilde;o dos ativos naturais
+							da Amaz&ocirc;nia, atrav&eacute;s dos Contratos Inteligentes, que possibilitam
+							seguran&ccedil;a,facilidade e menor custo para seus neg&oacute;cios. Nossa miss&atilde;o
+							&eacute; gerar Valor de Incentivo &agrave; Amaz&ocirc;nia, por meio da
+							implementa&ccedil;&atilde;o de uma economia sustent&aacute;vel e de impacto social para
+							regi&atilde;o.</p>
 					</div>
 				</div>
 			</div>
-		</section>
 
-		<section class="half-section p-0 bg-change bg-green">
-			<h2 class="d-none">heading</h2>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="main-title wow fadeIn" data-wow-delay="300ms">
+						<h2><b>Time</b> SELVA</h2>
 
-			<div class="container-fluid">
-				<div class="row align-items-center">
-					<div class="col-lg-6 col-md-12 p-lg-0 order-lg-2">
-						<div class="split-container-setting style-three text-center text-lg-left">
-							<div class="main-title mb-5 text-lg-left wow fadeIn" data-wow-delay="300ms">
-								<h2 class="mb-0">Contrato<br />
-								<b>Inteligente</b></h2>
-
-								<h5 class="font-18" style="margin-top: 10px;">O <strong>SELVA</strong> tem uma forma r&aacute;pida e segura para voc&ecirc; formalizar suas vendas dos ativos naturais da Amaz&ocirc;nia.</h5>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-6 col-md-12 p-0">
-						<div class="hover-effect"></div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section id="cases">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="main-title wow fadeIn" data-wow-delay="300ms">
-							<h2>Nossa <b>Galeria</b></h2>
-							<p>Amaz&ocirc;nia: os ativos naturais gerando riqueza, conhecimento e inova&ccedil;&atilde;o.</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="cbp" id="js-grid-slider-projects">
-							<div class="cbp-item">
-								<div class="cbp-caption">
-									<div class="cbp-caption-defaultWrap"><img alt="" src="../galeria/1.jpg" /></div>
-									<div class="cbp-l-caption-alignCenter">
-										<div class="cbp-l-caption-body">
-											<div class="cases-image-inner">
-												<h6 class="text-white text-uppercase font-14 font-secondary font-weight-light"></h6>
-											</div>
-										</div>
-									</div>
+						<div class="photos">
+							<div class="photo1">
+								<img src="../imgs/ra.jfif" alt="time SELVA">
+								<div class="text">
+									<h3>Rafael <br> Paixão</h3><span><i>Founder & CEO</i></span><br><br>
+									<p class="rafa">Amazonense, advogado e professor. Doutorando em Biotecnologia
+										(UFAM). Mestre em Direito Político e Econômico (Mackenzie). Programador de
+										Contratos Inteligentes em Blockchain Ethereum.</p>
 								</div>
 							</div>
-							<div class="cbp-item">
-								<div class="cbp-caption">
-									<div class="cbp-caption-defaultWrap"><img alt="" src="../galeria/2.jpg" /></div>
-									<div class="cbp-l-caption-alignCenter">
-										<div class="cbp-l-caption-body">
-											<div class="cases-image-inner">
-												<h6 class="text-white text-uppercase font-14 font-secondary font-weight-light"></h6>
-											</div>
-										</div>
-									</div>
+							<div class="photo2">
+								<img src="../imgs/carol.jfif" alt="time SELVA">
+								<div class="text">
+									<h3>Carol <br> Queiroz</h3><span><i>Designer</i></span><br><br>
+									<p class="carol">Designer UX/UI, Diretora de Comunicação da ASIAM (Associação de
+										Startups da Amazônia), Founder Agência VOLER. Atua no ecossistema com projetos
+										focados na Amazônia e posicionamento da marca.</p>
 								</div>
 							</div>
-							<div class="cbp-item">
-								<div class="cbp-caption">
-									<div class="cbp-caption-defaultWrap"><img alt="" src="../galeria/3.jpg" /></div>
-									<div class="cbp-l-caption-alignCenter">
-										<div class="cbp-l-caption-body">
-											<div class="cases-image-inner">
-												<h6 class="text-white text-uppercase font-14 font-secondary font-weight-light"></h6>
-											</div>
-										</div>
-									</div>
+							<div class="photo3">
+								<img src="../imgs/me.jfif" alt="time SELVA">
+								<div class="text">
+									<h3>Mérilin Cavalcanti</h3><span><i>Publicitária</i></span><br><br>
+									<p class="mel">Serviço Social. Graduanda de Publicidade e Propaganda. Amazonense e
+										contribuente para o ecossistema com empreendedorismo e pesquisas cientéficas.
+									</p>
 								</div>
 							</div>
-							<div class="cbp-item">
-								<div class="cbp-caption">
-									<div class="cbp-caption-defaultWrap"><img alt="" src="../galeria/4.jpg" /></div>
-									<div class="cbp-l-caption-alignCenter">
-										<div class="cbp-l-caption-body">
-											<div class="cases-image-inner">
-												<h6 class="text-white text-uppercase font-14 font-secondary font-weight-light"></h6>
-											</div>
-										</div>
-									</div>
+							<div class="photo3">
+								<img src="../imgs/gui2.jfif" alt="time SELVA">
+								<div class="text">
+									<h3>Guilherme Fernandes</h3><span><i>Dev FullStack Jr</i></span><br><br>
+									<p class="mel">Cursando ADS (Análise e Desenvolvimento de sistemas) pela FIAP SP,
+										com especialidade em sistemas Cloud AWS para serviços de web entre
+										cliente e servidor.</p>
 								</div>
 							</div>
-							<div class="cbp-item">
-								<div class="cbp-caption">
-									<div class="cbp-caption-defaultWrap"><img alt="" src="../galeria/5.jpg" /></div>
-									<div class="cbp-l-caption-alignCenter">
-										<div class="cbp-l-caption-body">
-											<div class="cases-image-inner">
-												<h6 class="text-white text-uppercase font-14 font-secondary font-weight-light"></h6>
-											</div>
-										</div>
-									</div>
+							<div class="photo4">
+								<img src="../imgs/tim.jfif" alt="time SELVA">
+								<div class="text">
+									<h3>Timóteo <br> Bentes</h3><span><i>Dev FullStack Jr</i></span><br><br>
+									<p class="tim">Natural de Manaus, no Amazonas. Cursando Ciência da Computação
+										(Estácio), com especialidade em linguagem Solidity para Web 3.0, JavaScript,
+										NodeJS, e MongoDB.</p>
 								</div>
-							</div>
-							<div class="cbp-item">
-								<div class="cbp-caption">
-									<div class="cbp-caption-defaultWrap"><img alt="" src="../galeria/6.jpg" /></div>
-									<div class="cbp-l-caption-alignCenter">
-										<div class="cbp-l-caption-body">
-											<div class="cases-image-inner">
-												<h6 class="text-white text-uppercase font-14 font-secondary font-weight-light"></h6>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="cbp-item">
-								<div class="cbp-caption">
-									<div class="cbp-caption-defaultWrap"><img alt="" src="../galeria/7.jpg" /></div>
-									<div class="cbp-l-caption-alignCenter">
-										<div class="cbp-l-caption-body">
-											<div class="cases-image-inner">
-												<h6 class="text-white text-uppercase font-14 font-secondary font-weight-light"></h6>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="cbp-item">
-								<div class="cbp-caption">
-									<div class="cbp-caption-defaultWrap"><img alt="" src="../galeria/8.jpg" /></div>
-									<div class="cbp-l-caption-alignCenter">
-										<div class="cbp-l-caption-body">
-											<div class="cases-image-inner">
-												<h6 class="text-white text-uppercase font-14 font-secondary font-weight-light"></h6>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="d-none" id="js-singlePage-container">
-							<div>
-								<div class="cbp-slider">
-									<ul class="cbp-slider-wrap">
-										<li class="cbp-slider-item"><img alt="" src="../galeria/1.jpg" /></li>
-									</ul>
-								</div>
-								<br />
-								<br />
-								&nbsp;
-							</div>
-							<div>
-								<div class="cbp-slider">
-									<ul class="cbp-slider-wrap">
-										<li class="cbp-slider-item"><img alt="" src="../galeria/2.jpg" /></li>
-									</ul>
-								</div>
-								<br />
-								<br />
-								&nbsp;
-							</div>
-							<div>
-								<div class="cbp-slider">
-									<ul class="cbp-slider-wrap">
-										<li class="cbp-slider-item"><img alt="" src="../galeria/3.jpg" /></li>
-									</ul>
-								</div>
-								<br />
-								<br />
-								&nbsp;
-							</div>
-							<div>
-								<div class="cbp-slider">
-									<ul class="cbp-slider-wrap">
-										<li class="cbp-slider-item"><img alt="" src="../galeria/4.jpg" /></li>
-									</ul>
-								</div>
-								<br />
-								<br />
-								&nbsp;
-							</div>
-							<div>
-								<div class="cbp-slider">
-									<ul class="cbp-slider-wrap">
-										<li class="cbp-slider-item"><img alt="" src="../galeria/5.jpg" /></li>
-									</ul>
-								</div>
-								<br />
-								<br />
-								&nbsp;
-							</div>
-							<div>
-								<div class="cbp-slider">
-									<ul class="cbp-slider-wrap">
-										<li class="cbp-slider-item"><img alt="" src="../galeria/6.jpg" /></li>
-									</ul>
-								</div>
-								<br />
-								<br />
-								&nbsp;
-							</div>
-							<div>
-								<div class="cbp-slider">
-									<ul class="cbp-slider-wrap">
-										<li class="cbp-slider-item"><img alt="" src="../galeria/7.jpg" /></li>
-									</ul>
-								</div>
-								<br />
-								<br />
-								&nbsp;
-							</div>
-							<div>
-								<div class="cbp-slider">
-									<ul class="cbp-slider-wrap">
-										<li class="cbp-slider-item"><img alt="" src="../galeria/8.jpg" /></li>
-									</ul>
-								</div>
-								<br />
-								<br />
-								&nbsp;
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
 
-		<!-- <section id="cases">
+			<span id="benefits"></span><br><br>
+			<div class="main-title wow fadeIn" data-wow-delay="300ms">
+				<h2><b>Vantagens</b></h2>
+			</div>
+			<div class="row">
+				<div class="main-title wow fadeIn" data-wow-delay="300ms"></div>
+				<div class="col-md-3 col-sm-12 mb-xs-2rem">
+					<div class="about-box center-block wow zoomIn" data-wow-delay="400ms">
+						<div class="about-opacity-icon"></div>
+
+						<div class="about-main-icon pb-4"><img src="icon1.png" /></div>
+
+						<h5 class="mb-0"><b>Impacto Social</b></h5>
+
+						<p style="margin-top:10px">Conectar os dados das comunidades as novas tecnologias e
+							com&eacute;rcios de bioprodutos.</p>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-sm-12 mb-xs-2rem">
+					<div class="about-box center-block wow zoomIn" data-wow-delay="500ms">
+						<div class="about-opacity-icon"></div>
+
+						<div class="about-main-icon pb-4"><img src="icon2.png" /></div>
+
+						<h5 class="mb-0"><b>Sustentabilidade</b></h5>
+
+						<p style="margin-top:10px">Novas oportunidades, outras formas de produzir, interagir e gerar
+							valor.</p>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-sm-12 mb-xs-2rem">
+					<div class="about-box center-block wow zoomIn" data-wow-delay="600ms">
+						<div class="about-opacity-icon"></div>
+
+						<div class="about-main-icon pb-4"><img src="icon3.png" /></div>
+
+						<h5 class="mb-0"><b>Economia Verde</b></h5>
+
+						<p style="margin-top:10px">Possibilita prote&ccedil;&atilde;o ambiental e igualdade social,
+							reduzindo os impactos ao meio ambiente.</p>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-sm-12">
+					<div class="about-box center-block wow zoomIn" data-wow-delay="700ms">
+						<div class="about-opacity-icon"></div>
+
+						<div class="about-main-icon pb-4"><img src="icon4.png" /></div>
+
+						<h5 class="mb-0"><b>Seguran&ccedil;a Jur&iacute;dica</b></h5>
+
+						<p style="margin-top:10px">Seus documentos arquivados em um sistema de seguran&ccedil;a de
+							ultima gera&ccedil;&atilde;o. Isso evita a perda ou modifica&ccedil;&atilde;o de itens sem a
+							permiss&atilde;o das partes envolvidas.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="half-section p-0 bg-change bg-green">
+		<h2 class="d-none">heading</h2>
+
+		<div class="container-fluid">
+			<div class="row align-items-center">
+				<div class="col-lg-6 col-md-12 p-lg-0 order-lg-2">
+					<div class="split-container-setting style-three text-center text-lg-left">
+						<div class="main-title mb-5 text-lg-left wow fadeIn" data-wow-delay="300ms">
+							<h2 class="mb-0">Contrato<br />
+								<b>Inteligente</b>
+							</h2>
+
+							<h5 class="font-18" style="margin-top: 10px;">O <strong>SELVA</strong> tem uma forma
+								r&aacute;pida e segura para voc&ecirc; formalizar suas vendas dos ativos naturais da
+								Amaz&ocirc;nia.</h5>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-6 col-md-12 p-0">
+					<div class="hover-effect"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="cases">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="main-title wow fadeIn" data-wow-delay="300ms">
+						<h2>Nossa <b>Galeria</b></h2>
+						<p>Amaz&ocirc;nia: os ativos naturais gerando riqueza, conhecimento e inova&ccedil;&atilde;o.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="cbp" id="js-grid-slider-projects">
+						<div class="cbp-item">
+							<div class="cbp-caption">
+								<div class="cbp-caption-defaultWrap"><img alt="" src="../galeria/1.jpg" /></div>
+								<div class="cbp-l-caption-alignCenter">
+									<div class="cbp-l-caption-body">
+										<div class="cases-image-inner">
+											<h6
+												class="text-white text-uppercase font-14 font-secondary font-weight-light">
+											</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cbp-item">
+							<div class="cbp-caption">
+								<div class="cbp-caption-defaultWrap"><img alt="" src="../galeria/2.jpg" /></div>
+								<div class="cbp-l-caption-alignCenter">
+									<div class="cbp-l-caption-body">
+										<div class="cases-image-inner">
+											<h6
+												class="text-white text-uppercase font-14 font-secondary font-weight-light">
+											</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cbp-item">
+							<div class="cbp-caption">
+								<div class="cbp-caption-defaultWrap"><img alt="" src="../galeria/3.jpg" /></div>
+								<div class="cbp-l-caption-alignCenter">
+									<div class="cbp-l-caption-body">
+										<div class="cases-image-inner">
+											<h6
+												class="text-white text-uppercase font-14 font-secondary font-weight-light">
+											</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cbp-item">
+							<div class="cbp-caption">
+								<div class="cbp-caption-defaultWrap"><img alt="" src="../galeria/4.jpg" /></div>
+								<div class="cbp-l-caption-alignCenter">
+									<div class="cbp-l-caption-body">
+										<div class="cases-image-inner">
+											<h6
+												class="text-white text-uppercase font-14 font-secondary font-weight-light">
+											</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cbp-item">
+							<div class="cbp-caption">
+								<div class="cbp-caption-defaultWrap"><img alt="" src="../galeria/5.jpg" /></div>
+								<div class="cbp-l-caption-alignCenter">
+									<div class="cbp-l-caption-body">
+										<div class="cases-image-inner">
+											<h6
+												class="text-white text-uppercase font-14 font-secondary font-weight-light">
+											</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cbp-item">
+							<div class="cbp-caption">
+								<div class="cbp-caption-defaultWrap"><img alt="" src="../galeria/6.jpg" /></div>
+								<div class="cbp-l-caption-alignCenter">
+									<div class="cbp-l-caption-body">
+										<div class="cases-image-inner">
+											<h6
+												class="text-white text-uppercase font-14 font-secondary font-weight-light">
+											</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cbp-item">
+							<div class="cbp-caption">
+								<div class="cbp-caption-defaultWrap"><img alt="" src="../galeria/7.jpg" /></div>
+								<div class="cbp-l-caption-alignCenter">
+									<div class="cbp-l-caption-body">
+										<div class="cases-image-inner">
+											<h6
+												class="text-white text-uppercase font-14 font-secondary font-weight-light">
+											</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cbp-item">
+							<div class="cbp-caption">
+								<div class="cbp-caption-defaultWrap"><img alt="" src="../galeria/8.jpg" /></div>
+								<div class="cbp-l-caption-alignCenter">
+									<div class="cbp-l-caption-body">
+										<div class="cases-image-inner">
+											<h6
+												class="text-white text-uppercase font-14 font-secondary font-weight-light">
+											</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="d-none" id="js-singlePage-container">
+						<div>
+							<div class="cbp-slider">
+								<ul class="cbp-slider-wrap">
+									<li class="cbp-slider-item"><img alt="" src="../galeria/1.jpg" /></li>
+								</ul>
+							</div>
+							<br />
+							<br />
+							&nbsp;
+						</div>
+						<div>
+							<div class="cbp-slider">
+								<ul class="cbp-slider-wrap">
+									<li class="cbp-slider-item"><img alt="" src="../galeria/2.jpg" /></li>
+								</ul>
+							</div>
+							<br />
+							<br />
+							&nbsp;
+						</div>
+						<div>
+							<div class="cbp-slider">
+								<ul class="cbp-slider-wrap">
+									<li class="cbp-slider-item"><img alt="" src="../galeria/3.jpg" /></li>
+								</ul>
+							</div>
+							<br />
+							<br />
+							&nbsp;
+						</div>
+						<div>
+							<div class="cbp-slider">
+								<ul class="cbp-slider-wrap">
+									<li class="cbp-slider-item"><img alt="" src="../galeria/4.jpg" /></li>
+								</ul>
+							</div>
+							<br />
+							<br />
+							&nbsp;
+						</div>
+						<div>
+							<div class="cbp-slider">
+								<ul class="cbp-slider-wrap">
+									<li class="cbp-slider-item"><img alt="" src="../galeria/5.jpg" /></li>
+								</ul>
+							</div>
+							<br />
+							<br />
+							&nbsp;
+						</div>
+						<div>
+							<div class="cbp-slider">
+								<ul class="cbp-slider-wrap">
+									<li class="cbp-slider-item"><img alt="" src="../galeria/6.jpg" /></li>
+								</ul>
+							</div>
+							<br />
+							<br />
+							&nbsp;
+						</div>
+						<div>
+							<div class="cbp-slider">
+								<ul class="cbp-slider-wrap">
+									<li class="cbp-slider-item"><img alt="" src="../galeria/7.jpg" /></li>
+								</ul>
+							</div>
+							<br />
+							<br />
+							&nbsp;
+						</div>
+						<div>
+							<div class="cbp-slider">
+								<ul class="cbp-slider-wrap">
+									<li class="cbp-slider-item"><img alt="" src="../galeria/8.jpg" /></li>
+								</ul>
+							</div>
+							<br />
+							<br />
+							&nbsp;
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- <section id="cases">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
@@ -737,44 +1076,51 @@
 			</div>
 		</section> -->
 
-		<section class="half-section p-0 mb-5" id="request">
-			<div class="col-md-12">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="main-title wow fadeIn" data-wow-delay="300ms" style="margin-bottom: 0;">
-							<h2> Nossos <b> Parceiros </b>  </h2>
-						</div>
+	<section class="half-section p-0 mb-5" id="request">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="main-title wow fadeIn" data-wow-delay="300ms" style="margin-bottom: 0;">
+						<h2> Nossos <b> Parceiros </b> </h2>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-8 mx-auto">
-				<div class="owl-carousel owl-theme">
-					<div class="item">
-						<div class="image" style="height: 100%;"><img alt="request" class="about-img sinapsebio" src="./assets/logo-sinapse.svg" /></div>
-					</div>
-					<div class="item">
-						<div class="image" style="height: 100%;"><img alt="request" class="about-img asiam" src="./assets/logo-asiam.svg" /></div>
-					</div>
-					<div class="item">
-						<div class="image" style="height: 100%;"><img alt="request" class="about-img centelha" src="./assets/logo-centelha.svg" /></div>
-					</div>
-					<div class="item">
-						<div class="image" style="height: 100%;"><img alt="request" class="about-img" src="./assets/logo-certi.svg" /></div>
-					</div>
-					<div class="item">
-						<div class="image" style="height: 100%;"><img alt="request" class="about-img" src="./assets/logo-fapeam.svg" /></div>
-					</div>
-					<div class="item">
-						<div class="image" style="height: 100%;"><img alt="request" class="about-img namazonia" src="./assets/logo-nova-amazonia.svg" /></div>
-					</div>
-					<div class="item">
-						<div class="image" style="height: 100%;"><img alt="request" class="about-img sebrae" src="./assets/logo-sebrae.svg" /></div>
-					</div>
+		</div>
+		<div class="col-lg-8 mx-auto">
+			<div class="owl-carousel owl-theme">
+				<div class="item">
+					<div class="image" style="height: 100%;"><img alt="request" class="about-img sinapsebio"
+							src="./assets/logo-sinapse.svg" /></div>
+				</div>
+				<div class="item">
+					<div class="image" style="height: 100%;"><img alt="request" class="about-img asiam"
+							src="./assets/logo-asiam.svg" /></div>
+				</div>
+				<div class="item">
+					<div class="image" style="height: 100%;"><img alt="request" class="about-img centelha"
+							src="./assets/logo-centelha.svg" /></div>
+				</div>
+				<div class="item">
+					<div class="image" style="height: 100%;"><img alt="request" class="about-img"
+							src="./assets/logo-certi.svg" /></div>
+				</div>
+				<div class="item">
+					<div class="image" style="height: 100%;"><img alt="request" class="about-img"
+							src="./assets/logo-fapeam.svg" /></div>
+				</div>
+				<div class="item">
+					<div class="image" style="height: 100%;"><img alt="request" class="about-img namazonia"
+							src="./assets/logo-nova-amazonia.svg" /></div>
+				</div>
+				<div class="item">
+					<div class="image" style="height: 100%;"><img alt="request" class="about-img sebrae"
+							src="./assets/logo-sebrae.svg" /></div>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<!-- <section class="half-section p-0 mb-5" id="request">
+	<!-- <section class="half-section p-0 mb-5" id="request">
 			<div class="container-fluid">
 				<div class="col-md-12">
 					<div class="row">
@@ -814,169 +1160,187 @@
 			</div>
 		</section> -->
 
-		<section class="half-section p-0 mb-5" id="request">
-			<div class="container-fluid">
-				<div class="col-md-12">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="main-title wow fadeIn" data-wow-delay="300ms">
-								<h2> BAIXE <b> o ebook SELVA </b>  </h2>
-								<p>As features do<strong> SELVA</strong> ofecerem eco-soluções r&aacute;pidas e seguras para voc&ecirc; formalizar e gerar o green-compliance aos seus bioprodutos e servi&ccedil;os rurais.</p>
+	<section class="half-section p-0 mb-5" id="request">
+		<div class="container-fluid">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="main-title wow fadeIn" data-wow-delay="300ms">
+							<h2> BAIXE <b> o ebook SELVA </b> </h2>
+							<p>As features do<strong> SELVA</strong> ofecerem eco-soluções r&aacute;pidas e seguras para
+								voc&ecirc; formalizar e gerar o green-compliance aos seus bioprodutos e servi&ccedil;os
+								rurais.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row align-items-center" style="background-color: #091E2E;">
+				<div class="col-lg-6 col-md-12 p-0">
+					<div>
+						<div class="item">
+							<div class="image split-blog-scale"><img alt="request" class="about-img" src="img1.jpeg" />
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="row align-items-center" style="background-color: #091E2E;">
-					<div class="col-lg-6 col-md-12 p-0">
-						<div>
-							<div class="item">
-								<div class="image split-blog-scale"><img alt="request" class="about-img" src="img1.jpeg" /></div>
-							</div>
+				<div class="col-lg-6 col-md-12 split-box-container-setting text-center p-md-0">
+					<div class="split-container-setting">
+						<div class="main-title text-center text-lg-left mb-lg-4 wow fadeIn" data-wow-delay="300ms">
+							<h5 class="mt-2rem" style="color: white;">Conhe&ccedil;a o <strong>SELVA</strong> e saiba
+								como fazer parte dessa comunidade de a&ccedil;&otilde;es para desenvolvimento e
+								transforma&ccedil;&atilde;o social da Amaz&ocirc;nia:</h5>
 						</div>
-					</div>
 
-					<div class="col-lg-6 col-md-12 split-box-container-setting text-center p-md-0">
-						<div class="split-container-setting">
-							<div class="main-title text-center text-lg-left mb-lg-4 wow fadeIn" data-wow-delay="300ms">
-								<h5 class="mt-2rem" style="color: white;">Conhe&ccedil;a o <strong>SELVA</strong> e saiba como fazer parte dessa comunidade de a&ccedil;&otilde;es para desenvolvimento e transforma&ccedil;&atilde;o social da Amaz&ocirc;nia:</h5>
-							</div>
-
-							<div class="request-form">
-								<form action="https://site-selva-c0bbf48aad63.herokuapp.com/user" method="post" class="request-form-outer">
-									<div class="row">
+						<div class="request-form">
+							<form action="https://site-selva-c0bbf48aad63.herokuapp.com/user" method="post"
+								class="request-form-outer">
+								<div class="row">
 									<div class="col-md-12 col-sm-12">
 										<div class="request-form-textfield pb-4">
-											<input data-email class="form-control mb-0" id="nome" name="nome" placeholder="Nome" required type="text" />
-											<input data-email class="form-control mb-0" id="telefone" name="telefone" placeholder="Telefone" type="text" />
-											<input data-email class="form-control mb-0" id="email" name="email" placeholder="E-mail" type="email" />
+											<input data-email class="form-control mb-0" id="nome" name="nome"
+												placeholder="Nome" required type="text" />
+											<input data-email class="form-control mb-0" id="telefone" name="telefone"
+												placeholder="Telefone" type="text" />
+											<input data-email class="form-control mb-0" id="email" name="email"
+												placeholder="E-mail" type="email" />
 										</div>
 									</div>
 
 									<div class="col-md-12 col-sm-12">
 										<div class="request-form-textfield pb-4">
-											<select data-service class="form-control" id="services" name="service" required title="service">
+											<select data-service class="form-control" id="services" name="service"
+												required title="service">
 												<option>Tipo de Usu&aacute;rio</option>
 												<option value="1">Produtor</option>
 												<option value="2">Investidor</option>
 												<option value="3">Pesquisador</option>
 												<option value="4">
 													Outros
-												</option> 
+												</option>
 											</select>
 										</div>
 									</div>
 
 									<div class="col-lg-12 pt-xs-25px text-lg-left text-center">
-										<button type="submit" name="submit" class="btn-setting btn-scale btn-blue text-white" id="btnSubmit">
-											Baixar E-Book 
+										<button type="submit" name="submit"
+											class="btn-setting btn-scale btn-blue text-white" id="btnSubmit">
+											Baixar E-Book
 										</button>
 									</div>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="bg-green brand-transform-padding">
-			<div class="section-padding"></div>
-		</section>
-
-		<section class="p-0 contact-transform position-absolute w-100" id="contact">
-			<div class="container contact-shadow">
-				<div class="row mx-lg-0">
-					<div class="col-lg-6 col-md-6 col-sm-12 p-0">
-						<div class="contact-box box-shadow-contact">
-							<div class="main-title text-center text-md-left mb-4">
-								<h2 class="font-weight-normal">Fale Conosco</h2>
-							</div>
-
-							<div class="text-center text-md-left">
-								<p class="mb-3">IMPACT HUB - Sala/Box 506 <br> Av. Ephigenio Salles, n&ordm; 1299 - Aleixo, Manaus - AM, 69060-020</p>
-								<p class="mb-3">Telefones:<br />
-									&nbsp;&nbsp;&nbsp; +55 (11) 948114406<br />
-									&nbsp;&nbsp;&nbsp; +55 (92) 992643800
-								</p>
-								<p class="mb-3">Email: <a class="color-black" href="mailto:contato@selva.eco.br">contato@selva.eco.br</a></p>
-								<div class="address-social black">
-									<ul class="list-unstyled">
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul>
 								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-green brand-transform-padding">
+		<div class="section-padding"></div>
+	</section>
+
+	<section class="p-0 contact-transform position-absolute w-100" id="contact">
+		<div class="container contact-shadow">
+			<div class="row mx-lg-0">
+				<div class="col-lg-6 col-md-6 col-sm-12 p-0">
+					<div class="contact-box box-shadow-contact">
+						<div class="main-title text-center text-md-left mb-4">
+							<h2 class="font-weight-normal">Fale Conosco</h2>
+						</div>
+
+						<div class="text-center text-md-left">
+							<p class="mb-3">IMPACT HUB - Sala/Box 506 <br> Av. Ephigenio Salles, n&ordm; 1299 - Aleixo,
+								Manaus - AM, 69060-020</p>
+							<p class="mb-3">Telefones:<br />
+								&nbsp;&nbsp;&nbsp; +55 (11) 948114406<br />
+								&nbsp;&nbsp;&nbsp; +55 (92) 992643800
+							</p>
+							<p class="mb-3">Email: <a class="color-black"
+									href="mailto:contato@selva.eco.br">contato@selva.eco.br</a></p>
+							<div class="address-social black">
+								<ul class="list-unstyled">
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6 col-md-6 col-sm-12 p-0 col-map box-shadow-map">
-						<div class="bg-light-gray map"><iframe allowfullscreen="" aria-hidden="false" frameborder="0" height="422" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.0306928974014!2d-60.00691082541618!3d-3.0864828402428355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c1abfbdf4276d%3A0xc759351cec483656!2sImpact%20Hub%20Manaus!5e0!3m2!1spt-BR!2sbr!4v1697731395871!5m2!1spt-BR!2sbr" style="border:0;" tabindex="0" width="100%"></iframe></div>
-						<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7967.717831310145!2d-60.01677892229003!3d-3.131962699999991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c057e50775019%3A0x4acf6360a7c8119!2sIncubadora%20de%20Empresas%20da%20UEA!5e0!3m2!1spt-BR!2sbr!4v1682106363495!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 p-0 col-map box-shadow-map">
+					<div class="bg-light-gray map"><iframe allowfullscreen="" aria-hidden="false" frameborder="0"
+							height="422"
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.0306928974014!2d-60.00691082541618!3d-3.0864828402428355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c1abfbdf4276d%3A0xc759351cec483656!2sImpact%20Hub%20Manaus!5e0!3m2!1spt-BR!2sbr!4v1697731395871!5m2!1spt-BR!2sbr"
+							style="border:0;" tabindex="0" width="100%"></iframe></div>
+					<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7967.717831310145!2d-60.01677892229003!3d-3.131962699999991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c057e50775019%3A0x4acf6360a7c8119!2sIncubadora%20de%20Empresas%20da%20UEA!5e0!3m2!1spt-BR!2sbr!4v1682106363495!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
 				</div>
 			</div>
-		</section>
-		<footer class="bg-light-gray footer-transform-padding">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 col-sm-12 text-center">
-						<p class="copyrights px-0 py-5">&copy; 2023 SELVA - Sistema Estruturado Legal de Valores Amaz&ocirc;nicos</p>
-					</div>
+		</div>
+	</section>
+	<footer class="bg-light-gray footer-transform-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 text-center">
+					<p class="copyrights px-0 py-5">&copy; 2023 SELVA - Sistema Estruturado Legal de Valores
+						Amaz&ocirc;nicos</p>
 				</div>
 			</div>
-		</footer>
+		</div>
+	</footer>
 
-		<script src="../library-js/bundle.min.js"></script>
-		<script src="../library-js/jquery.fancybox.min.js"></script>
-		<script src="../library-js/owl.carousel.min.js"></script>
-		<script src="../library-js/swiper.min.js"></script>
-		<script src="../library-js/jquery.cubeportfolio.min.js"></script>
-		<script src="../library-js/jquery.appear.js"></script>
-		<script src="../library-js/parallaxie.min.js"></script>
-		<script src="../library-js/wow.min.js"></script>
-		<script src="../library-js/select2.min.js"></script>
-		<script src="../library-js/slick.min.js"></script>
-		<script src="../library-js/jquery.themepunch.tools.min.js"></script>
-		<script src="../library-js/jquery.themepunch.revolution.min.js"></script>
-		<script src="../library-js/revolution.extension.actions.min.js"></script>
-		<script src="../library-js/revolution.extension.carousel.min.js"></script>
-		<script src="../library-js/revolution.extension.kenburn.min.js"></script>
-		<script src="../library-js/revolution.extension.layeranimation.min.js"></script>
-		<script src="../library-js/revolution.extension.migration.min.js"></script>
-		<script src="../library-js/revolution.extension.navigation.min.js"></script>
-		<script src="../library-js/revolution.extension.parallax.min.js"></script>
-		<script src="../library-js/revolution.extension.slideanims.min.js"></script>
-		<script src="../library-js/revolution.extension.video.min.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgIfLQi8KTxTJahilcem6qHusV-V6XXjw"></script>
-		<script src="../library-js/maps.min.js"></script>
-		<script src="../library-js/contact_us.js"></script>
-		<script src="../library-js/script.js"></script>
-		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<script src="../library-js/bundle.min.js"></script>
+	<script src="../library-js/jquery.fancybox.min.js"></script>
+	<script src="../library-js/owl.carousel.min.js"></script>
+	<script src="../library-js/swiper.min.js"></script>
+	<script src="../library-js/jquery.cubeportfolio.min.js"></script>
+	<script src="../library-js/jquery.appear.js"></script>
+	<script src="../library-js/parallaxie.min.js"></script>
+	<script src="../library-js/wow.min.js"></script>
+	<script src="../library-js/select2.min.js"></script>
+	<script src="../library-js/slick.min.js"></script>
+	<script src="../library-js/jquery.themepunch.tools.min.js"></script>
+	<script src="../library-js/jquery.themepunch.revolution.min.js"></script>
+	<script src="../library-js/revolution.extension.actions.min.js"></script>
+	<script src="../library-js/revolution.extension.carousel.min.js"></script>
+	<script src="../library-js/revolution.extension.kenburn.min.js"></script>
+	<script src="../library-js/revolution.extension.layeranimation.min.js"></script>
+	<script src="../library-js/revolution.extension.migration.min.js"></script>
+	<script src="../library-js/revolution.extension.navigation.min.js"></script>
+	<script src="../library-js/revolution.extension.parallax.min.js"></script>
+	<script src="../library-js/revolution.extension.slideanims.min.js"></script>
+	<script src="../library-js/revolution.extension.video.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgIfLQi8KTxTJahilcem6qHusV-V6XXjw"></script>
+	<script src="../library-js/maps.min.js"></script>
+	<script src="../library-js/contact_us.js"></script>
+	<script src="../library-js/script.js"></script>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-		<script>
-			$('.owl-carousel').owlCarousel({
-				loop: true,
-    			nav: true,
-				responsiveClass: true,
-				responsive: {
-					0: {
-						items: 1,
-						nav: true
-					},
-					600: {
-						items: 3,
-						nav: false
-					},
-					1000: {
-						items: 5,
-						nav: true,
-						loop: false
-					}
+	<script>
+		$('.owl-carousel').owlCarousel({
+			loop: true,
+			nav: true,
+			responsiveClass: true,
+			responsive: {
+				0: {
+					items: 1,
+					nav: true
+				},
+				600: {
+					items: 3,
+					nav: false
+				},
+				1000: {
+					items: 5,
+					nav: true,
+					loop: false
 				}
-			});
-		</script>
-	</body>
+			}
+		});
+	</script>
+</body>
+
 </html>
