@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+
+#Inicio {
+    margin-top: 7rem;
+}
+
+.texts-home {
+    font-size: 4rem;
+    line-height: 6rem;
+}
+
+.text-sol {
+    color: #FFFFFF;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.text-gar {
+    color: #c3e438;
+}
+
+.text-cad {
+    color: #FFFFFF;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+    text-decoration: underline;
+    text-decoration-color: #6b700c;
+}
+
+.text-rast {
+    background: #c3e438;
+    color: #212529;
+    padding: 0 0.5rem;
+    margin-left: .4rem;
+}
+
+.text-ts {
+    background: #eef1f5;
+    color: #212529;
+    padding: 0 0.5rem;
+    margin-left: .4rem;
+}
+
+#mainNav img {
+    width: 15rem !important;
+}
+
+.greeDark {
+    color: #6b700c;
+}
+
+.grayDark {
+    color: rgb(71 85 105);
+}
+
+.benefitsIMG img {
+    width: 5rem;
+}
+
+.headroom--not-top .navbar-sticky.navbar-dark {
+    background: #c3e438 !important;
+}
+
+.headroom--not-top .navbar-sticky.navbar-dark img {
+    filter: brightness(0);
+}
+
+.greenColor {
+    color: #168f0e !important;
+}
+
+footer {
+    color: #212529;
+}
+
+.linkSelva {
+    transform: none;
+    color: #212529;
+}
+
+.linkSelva:hover {
+    color: #168f0e;
+}
