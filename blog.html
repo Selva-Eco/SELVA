@@ -58,18 +58,16 @@
 
 	<header>
 		<nav class="navbar navbar-top-default navbar-expand-lg static-nav transparent-bg nav-bottom-line">
-			<div class="container">
+			<div class="container nav-head">
 				<div class="collapse navbar-collapse d-none d-lg-block">
 					<a href="index.html">
 						<img alt="logo" class="logo-scrolled" src="logo2.png" title="Logo" />
 					</a>
-					<ul class="nav navbar-nav newblog">
-						<a class="scroll nav-link" href="#home">BLOG / NEWSLETTER</a>
-					</ul>
 				</div>
-				<!-- <a class="scroll btn-setting btn-scale btn-green text-white d-none d-lg-block" href="#request">
-					E-BOOK GR&Aacute;TIS
-				</a>  -->
+				<a class="btn-setting btn-scale btn-green text-white d-none d-lg-block book"
+					href="https://selva.eco.br/app/">
+					Selva Service
+				</a>
 			</div>
 		</nav>
 
@@ -92,51 +90,11 @@
 						<li class="side-menu-icons"></li>
 					</ul>
 
-					<p class="text-white">&copy; 2022 SELVA - Sistema Estruturado Legal de Valores Amaz&ocirc;nicos</p>
+					<p class="text-white">&copy; 2026 SELVA - Sistema Estruturado Legal de Valores Amaz&ocirc;nicos</p>
 				</div>
 			</div>
 		</div>
 	</header>
-
-	<div id="box-public">
-		<div class="text">
-			<h1>Quer seu artigo publicado no Blog/Newsletter da SELVA?</h1>
-			<h3>Preencha os campos abaixo</h3>
-			<ion-icon onclick="hide()" name="close-outline"></ion-icon>
-		</div>
-		<div class="form">
-			<form action="https://selva-website-api.herokuapp.com/post" enctype="multipart/form-data" method="post">
-				<input type="text" name="name" id="name" placeholder="Nome" required>
-				<input type="text" placeholder="E-mail" required>
-				<textarea name="article" id="article" placeholder="Seu artigo ou notícia"></textarea>
-				<span>OU</span>
-				<input style="color: #fff;" type="file" name="doc" id="doc">
-				<button type="submit" id="btnSubmit">Enviar</button>
-			</form>
-		</div>
-	</div>
-
-	<div id="box-selvatico">
-		<div class="text">
-			<h1>Quer ser selvático?</h1>
-			<h3>Cadastre seu currículo</h3>
-			<ion-icon onclick="hide()" name="close-outline"></ion-icon>
-		</div>
-		<div class="form">
-			<form action="https://selva-website-api.herokuapp.com/resume" enctype="multipart/form-data" method="post">
-				<input type="text" name="name" id="name" placeholder="Nome" required>
-				<input type="text" placeholder="E-mail" required>
-				<input style="color: #fff;" type="file" name="doc" id="doc">
-				<button type="submit" id="btnSubmit">Cadastrar</button>
-			</form>
-		</div>
-	</div>
-
-	<button onclick="showNew()" class="publique">Publique aqui</button>
-	<button onclick="showSelva()" class="selvatico">Quer ser selvático?</button>
-	<button onclick="showMore()" class="mais">
-		<img src="./logo.png" width="100" alt="show more">
-	</button>
 
 	<section class="p-0 no-transition h-100vh" id="home">
 		<h2 class="d-none">heading</h2>
@@ -231,15 +189,16 @@
 		</div>
 	</section>
 
-	<section class="half-section p-0 mb-5" id="request">
+	<section class="half-section p-0 my-5" id="request">
 		<div class="container-fluid">
 			<div class="col-md-12">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="main-title wow fadeIn" data-wow-delay="300ms">
-							<h2> Baixe <br><b> o ebook SELVA </b>  </h2>
-
-							<p>As features do<strong> SELVA</strong> ofecerem eco-soluções r&aacute;pidas e seguras para voc&ecirc; formalizar e gerar o green-compliance aos seus bioprodutos e servi&ccedil;os rurais.</p>
+							<h2> BAIXE <b> o ebook SELVA </b> </h2>
+							<p>As features do<strong> SELVA</strong> ofecerem eco-soluções r&aacute;pidas e seguras para
+								voc&ecirc; formalizar e gerar o green-compliance aos seus bioprodutos e servi&ccedil;os
+								rurais.</p>
 						</div>
 					</div>
 				</div>
@@ -247,9 +206,10 @@
 
 			<div class="row align-items-center" style="background-color: #091E2E;">
 				<div class="col-lg-6 col-md-12 p-0">
-					<div class="owl-carousel owl-theme owl-split">
+					<div>
 						<div class="item">
-							<div class="image split-blog-scale"><img alt="request" class="about-img" src="img1.jpeg" /></div>
+							<div class="image split-blog-scale"><img alt="request" class="about-img" src="img1.jpeg" />
+							</div>
 						</div>
 					</div>
 				</div>
@@ -257,36 +217,45 @@
 				<div class="col-lg-6 col-md-12 split-box-container-setting text-center p-md-0">
 					<div class="split-container-setting">
 						<div class="main-title text-center text-lg-left mb-lg-4 wow fadeIn" data-wow-delay="300ms">
-							<h5 class="mt-2rem" style="color: white;">Conhe&ccedil;a o <strong>SELVA</strong> e saiba como fazer parte dessa comunidade de a&ccedil;&otilde;es para desenvolvimento e transforma&ccedil;&atilde;o social da Amaz&ocirc;nia:</h5>
+							<h5 class="mt-2rem" style="color: white;">Conhe&ccedil;a o <strong>SELVA</strong> e saiba
+								como fazer parte dessa comunidade de a&ccedil;&otilde;es para desenvolvimento e
+								transforma&ccedil;&atilde;o social da Amaz&ocirc;nia:</h5>
 						</div>
 
 						<div class="request-form">
-							<form action="https://selva-website-api.herokuapp.com/user" method="post" class="request-form-outer">
+							<form id="formEbook" class="request-form-outer">
 								<div class="row">
 									<div class="col-md-12 col-sm-12">
 										<div class="request-form-textfield pb-4">
-											<input data-email class="form-control mb-0" id="nome" name="nome" placeholder="Nome" required type="text" />
-											<input data-email class="form-control mb-0" id="telefone" name="telefone" placeholder="Telefone" type="text" />
-											<input data-email class="form-control mb-0" id="email" name="email" placeholder="E-mail" type="email" />
+											<input data-email class="form-control mb-0" id="nome" name="nome"
+												placeholder="Nome" required type="text" />
+											<input data-email class="form-control mb-0" id="telefone" name="telefone"
+												placeholder="WhatsApp: (XX) XXXXX-XXXX" required type="tel" maxlength="15" />
+											<input data-email class="form-control mb-0" id="email" name="email"
+												placeholder="E-mail" required type="email" />
 										</div>
 									</div>
 
 									<div class="col-md-12 col-sm-12">
 										<div class="request-form-textfield pb-4">
-											<select class="form-control" id="services" name="service" required="" title="service">
+											<select data-email class="form-control" id="services" name="services"
+												required title="services">
 												<option>Tipo de Usu&aacute;rio</option>
-												<option value="1">Produtor</option>
-												<option value="2">Investidor</option>
-												<option value="3">Pesquisador</option>
-												<option value="4">Outros</option> 
+												<option value="produtor">Produtor</option>
+												<option value="investidor">Investidor</option>
+												<option value="pesquisador">Pesquisador</option>
+												<option value="outros">
+													Outros
+												</option>
 											</select>
 										</div>
 									</div>
 
 									<div class="col-lg-12 pt-xs-25px text-lg-left text-center">
-										<a class="btn-setting btn-scale btn-blue text-white contact_btn" id="btnSubmit" target="_blank" href="https://www.selva.eco.br/ebook.pdf">
+										<button type="submit" class="btn-setting btn-scale btn-blue text-white" id="btnSubmitEbook">
 											Baixar E-Book
-										</a>
+										</button>
+										<div id="formMsg" class="mt-3" style="display: none; font-weight: 500;"></div>
 									</div>
 								</div>
 							</form>
@@ -297,13 +266,54 @@
 		</div>
 	</section>
 
-	<footer class="bg-green">
-        <span>Nos siga nas redes sociais</span>
-        <div class="redes-sociais">
-            <a href="https://www.linkedin.com/company/selvaeco/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-linkedin"></ion-icon></a>
-            <a href="https://www.instagram.com/selva.eco/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-instagram"></ion-icon></a>
-        </div>
-        <p class="copyrights px-0 py-5">&copy; 2022 SELVA - Sistema Estruturado Legal de Valores Amaz&ocirc;nicos</p>
+	<section class="bg-green brand-transform-padding">
+		<div class="section-padding"></div>
+	</section>
+
+	<section class="p-0 contact-transform position-absolute w-100" id="contact">
+		<div class="container contact-shadow">
+			<div class="row mx-lg-0">
+				<div class="col-lg-6 col-md-6 col-sm-12 p-0">
+					<div class="contact-box box-shadow-contact">
+						<div class="main-title text-center text-md-left mb-4">
+							<h2 class="font-weight-normal">Fale Conosco</h2>
+						</div>
+
+						<div class="text-center text-md-left">
+							<p class="mb-3">AMAZONJUR COWORKING <br> Rua 24 de Maio, n&ordm; 220, Ed. Rio Negro Center, sala 619, Box 09 - Centro,
+								Manaus - AM, 69010-080</p>
+							<p class="mb-3">Telefones:<br />
+								&nbsp;&nbsp;&nbsp; <a href="https://wa.me/5511948114406" target="_blank" class="color-black">+55 (11) 94811-4406</a><br />
+								&nbsp;&nbsp;&nbsp; <a href="https://wa.me/5592984681214" target="_blank" class="color-black">+55 (92) 98468-1214</a>
+							</p>
+							<p class="mb-3">
+								Email: <a class="color-black" href="mailto:contato@selva.com.br">contato@selva.eco.br</a></p>
+							<div class="address-social black">
+								<ul class="list-unstyled color-black">
+									<li><a href="https://www.instagram.com/selva.eco" target="_blank"><ion-icon name="logo-instagram" style="font-size: 2rem;"></ion-icon></a></li>
+									<li><a href="https://www.linkedin.com/company/selvaeco" target="_blank"><ion-icon name="logo-linkedin" style="font-size: 2rem;"></ion-icon></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 p-0 col-map box-shadow-map">
+					<div class="bg-light-gray map">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.8588763138946!2d-60.02721322550316!3d-3.1319730404280053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c05c1e7e7485d%3A0xe6b926c186dbcfd2!2sEdif%C3%ADcio%20Rio%20Negro%20Center!5e0!3m2!1spt-BR!2sbr!4v1772727683801!5m2!1spt-BR!2sbr" width="100%" height="422" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="bg-light-gray footer-transform-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 text-center">
+					<p class="copyrights px-0 py-5 text-muted" id="copyright"></p>
+				</div>
+			</div>
+		</div>
 	</footer>
 
 	<script src="library-js/bundle.min.js"></script>
@@ -331,8 +341,74 @@
 	<script src="library-js/maps.min.js"></script>
 	<script src="library-js/contact_us.js"></script>
 	<script src="library-js/blog.js"></script>
-	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<script>
+		// COLE AQUI A NOVA URL QUE VOCÊ GEROU NO PASSO 1
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbyOyZbh8hiYc5iG6pON8HL-vpwcM2ZAqu2dvQWEb571729H5JPYSbtK3lS9vJUoFQFy6A/exec'; 
+		
+		const form = document.getElementById('formEbook');
+		const btnSubmit = document.getElementById('btnSubmitEbook');
+		const formMsg = document.getElementById('formMsg');
+		const phoneInput = document.getElementById('telefone');
+
+		// 1. Máscara de WhatsApp (Formata enquanto o utilizador digita)
+		phoneInput.addEventListener('input', function (e) {
+			let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+			e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+		});
+
+		// 2. Envio dos Dados
+		form.addEventListener('submit', e => {
+			e.preventDefault(); // Impede a página de recarregar
+			
+			// Muda o botão para estado de carregamento
+			btnSubmit.innerHTML = 'Enviando...';
+			btnSubmit.disabled = true;
+
+			// Remove a máscara para guardar só os números e cria o link do WhatsApp com o +55 do Brasil
+			let rawPhone = phoneInput.value.replace(/\D/g, ''); 
+			let zapLink = 'https://wa.me/55' + rawPhone;
+
+			// Cria o pacote de dados a enviar
+			let formData = new FormData(form);
+			formData.set('telefone', zapLink); // Substitui o número formatado pelo link antes de enviar!
+
+			// Faz o envio (Sem o 'no-cors' para podermos ouvir a resposta real do Google)
+			fetch(scriptURL, { method: 'POST', body: formData })
+				.then(response => {
+					if (response.ok) {
+						// Mensagem de Sucesso APENAS se o Google confirmou que guardou!
+						formMsg.style.display = 'block';
+						formMsg.style.color = '#4caf50'; // Verde
+						formMsg.innerHTML = 'Sucesso! O download do seu E-book começará em instantes...';
+						
+						form.reset();
+						btnSubmit.innerHTML = 'Baixar E-Book';
+						btnSubmit.disabled = false;
+
+						// Dispara o E-book
+						window.open('./ebook.pdf', '_blank'); 
+					} else {
+						throw new Error('Erro na comunicação com a folha de cálculo.');
+					}
+				})
+				.catch(error => {
+					// Mensagem de Erro
+					formMsg.style.display = 'block';
+					formMsg.style.color = '#ff5252'; // Vermelho
+					formMsg.innerHTML = 'Ocorreu um erro ao enviar. Tente novamente.';
+					btnSubmit.innerHTML = 'Baixar E-Book';
+					btnSubmit.disabled = false;
+					console.error('Erro!', error.message);
+				});
+		});
+	</script>
+	<script>
+		const copyright = document.getElementById('copyright');
+		const year = new Date().getFullYear();
+		copyright.innerHTML = '&copy; ' + year + ' SELVA - Sistema Estruturado Legal de Valores Amaz&ocirc;nicos';
+	</script>
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
